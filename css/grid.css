@@ -88,7 +88,7 @@ left:calc(100% - 100px);
 
 .gridOverlay {
 width:992px;
-background: url("lGrid.png");
+/*background: url("lGrid.png");*/
 margin-left: -496px;
 }
 
@@ -121,7 +121,7 @@ display:none;
 
 .gridOverlay {
 width:768px;
-background: url("mGrid.png");
+/*background: url("mGrid.png");*/
 margin-left: -384px;
 }
 
