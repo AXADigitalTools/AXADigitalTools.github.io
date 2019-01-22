@@ -161,7 +161,7 @@
 
 /* Large Layout for portrait mode tablets and window sizes up to 1200px wide */
 
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 1199px) {
   .logo {
     height: 43px;
     width: 43px;
@@ -173,7 +173,7 @@
 
 /* Medium Layout for tablets and window sizes up to 992px wide */
 
-@media only screen and (min-width: 768x) {
+@media only screen and (max-width: 991px) {
   .logo {
     top: 14px;
   }
@@ -187,7 +187,8 @@
 
 /* Small Layout for mobiles and window sizes up to 768px wide */
 
-@media only screen and (min-width: 100px) {
+@media only screen and (max-width: 767px) {
+
   .logo {
     height: 35px;
     width: 35px;
