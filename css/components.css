@@ -116,6 +116,9 @@
     height: 43px;
     width: 43px;
   }
+  .sidebarHeading {
+    font-size:18px;
+  }
 }
 
 /* Medium Layout for tablets and window sizes up to 992px wide */
