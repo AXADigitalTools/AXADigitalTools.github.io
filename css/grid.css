@@ -1,6 +1,7 @@
 @font-face {
   font-family: publico;
   src: url("publico.otf") format("opentype");
+  src: url('publico.ttf')  format('truetype')
 }
 
 * {
