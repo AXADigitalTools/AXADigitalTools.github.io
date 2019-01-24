@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Private Domain Mockup</title>
+  <link rel="stylesheet" type="text/css" href="css/pdstyles.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+  <div class="navigation">
+    <div class="tab"><span>Policy </span>Details</div>
+    <div class="tab"><span>Policy </span>Documents</div>
+    <div class="tab active">Claims</div>
+  </div>
+
+  <div class="content">
+       <div class="section blue">
+    <h3>Existing claims</h3>
+    </div>
+    <div class="section">
+      <table cellspacing="0" cellpadding="0">
+        <tr>
+          <th>Reference:</th>
+          <th>Claim Type:</th>
+          <th>Date:</th> 
+          <th>Status:</th>
+        </tr>
+        <tr>
+          <td>000-00-001385-00</td>
+          <td>Accident - Impact with another vehicle</td>
+          <td>01/12/2018</td>
+          <td>Open</td>
+        </tr>
+        <tr>
+          <td>000-00-001246-00</td>
+          <td>Information Only</td>
+          <td>01/10/2018</td>
+          <td>Closed</td>
+        </tr>
+      </table>
+     
+    </div>
+    <h2>Tell us about an incident</h2>
+    <div class="section blue">
+    <h3>Online - All day everyday</h3>
+    </div>
+
+    <div class="section">
+      <p><strong>Online - All day everyday</strong></p>
+      <p>Use our fast, online claims service to report an incident in the following cirumstances</p>
+      <div class="claimType"><img src="images/parking.png">Your vehicle was damaged whilst parked (excluding vandalism)</div>
+      <div class="claimType"><img src="images/weather.png">Damage caused by a storm or bad weather</div>
+      <div class="claimType"><img src="images/crash.png">An accident with up to 1 other vehicle</div>
+      <div class="claimType"><img src="images/glass.png">Damage to your windscreen</div>
+      </br>
+      <div class="button">Report a new incident</div>       <div class="button">Retrieve a saved incident</div> 
+    </div>
+    <div class="section blue">
+    <h3>By Phone</h3>
+    </div>
+    <div class="section">
+      <p><strong>By Phone - All day everyday</strong></p>
+      <p>Use our fast, online claims service to report an incident in the following cirumstances</p>
+      
+    </div>
+
+    <h2>Claims checklist for car accidents</h2>
+    <div class="accordion-wrapper">
+    <button class="accordion">More Information</button>
+    <div class="panel">
+      <ul>
+        <li>
+            <strong>Safety is the priority </strong>
+            <br>Once everyone involved is safe or is being safely looked after, it's time to make a car insurance claim.
+        </li>
+
+        <li>
+            <strong>Take down the details</strong>
+            <br>You will need to tell us what happened and who was involved. Note all the details of the other vehicles, drivers, passengers and witnesses. Taking photos of the scene and the cars helps too.
+        </li>
+
+        <li>
+            <strong>Don't discuss who caused the accident </strong>
+            <br>For expert help, contact us as soon as possible. We'll take care of the claim for you - including investigating who was responsible.
+        </li>
+
+        <li>
+            <strong>Make your claim without delay </strong>
+            <br>Leaving it late to report your claim could affect how much we can help. For expert support, call us from the scene as soon as you can.
+        </li>
+    </div>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion-wrapper">
+    <button class="accordion">Can I use my own preferred repairer?</button>
+    <div class="panel">
+      <p>Yes, but to ensure your repairs are carried out to the vehicle manufacturer’s specifications and guaranteed, for your own convenience we would recommend you use one of our approved repairers. However, if you choose to use your own repairer, you wouldn’t get a courtesy car from us, and any car provided by your repairer would have to be insured by you. We also won’t be able to help you with any problems you might have with the repairs.</p>
+    </div>
+    </div>
+
+    <div class="accordion-wrapper">
+    <button class="accordion">Can I choose when I have my car repaired?</button>
+    <div class="panel">
+      <p>Yes, but if your vehicle is immobile or unroadworthy, our approved repairer will collect your vehicle within 24 hours, subject to availability, and supply a courtesy vehicle.</p>
+    </div>
+    </div>
+
+
+    <div class="accordion-wrapper">
+    <button class="accordion">Will I be provided with a courtesy vehicle?</button>
+    <div class="panel">
+      <p>Yes, if your car is repaired by one of our approved repairers, you’ll be given a small courtesy car. If you have taken out our courtesy car upgrade, we’ll ensure the car you get is a similar size to your own.</p>
+    </div>
+    </div>
+
+
+    <div class="accordion-wrapper">
+    <button class="accordion">Will the repair be guaranteed?</button>
+    <div class="panel">
+      <p>Yes, we provide a lifetime guarantee when you use our approved repairers, for as long as you own the vehicle.</p>
+    </div>
+    </div>
+
+
+    <div class="accordion-wrapper">
+    <button class="accordion">Will the repair invalidate my manufacturer’s warranty?</button>
+    <div class="panel">
+      <p>No, as we insist that our approved network repairs vehicles in line with manufacturer and Thatcham Research Centre guidelines.</p>
+    </div>
+    </div>
+
+    </br>
+    <a href="https://www.axa.co.uk/insurance/personal/car/claims/" target="blank">More information about making a car insurance claim</a>
+
+  </div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+
+</html>
