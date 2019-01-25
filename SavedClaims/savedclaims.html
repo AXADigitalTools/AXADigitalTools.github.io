@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>eNol Prototype</title>
+  <link rel="stylesheet" type="text/css" href="css/grid.css" />
+  <link rel="stylesheet" type="text/css" href="css/components.css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+</head>
+
+<body onresize="displayWindowSize()">
+<p id="windowSize">Window size: width=1366, height=728</p>
+<button onclick="toggleGrid()">Turn on Grid</button>
+
+<div class="header">
+  <div class="container">
+  <img src="images/logo.png" class="logo"></img>
+  </div>
+</div>
+
+<div class="container">
+<p class="intro">If you have started to report an incident to AXA in the last 30 days, you can continue without having to provide all of the details again.</p>
+<div class="main">
+  <div class="mainsectionHeading gutter">
+  Your saved incidents
+  </div>
+  <div class="mainsectionBody gutter clearfix"> </div>
+</div>
+
+<div class="gridOverlay" id="grid"></div>
+
+<script>
+function displayWindowSize() {
+  var w = window.outerWidth;
+  var h = window.outerHeight;
+  var txt = "Window size: width=" + w + ", height=" + h;
+  document.getElementById("windowSize").innerHTML = txt;
+}
+
+function toggleGrid() {
+  var x = document.getElementById("grid");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+</script>
+</body>
+
+</html>
