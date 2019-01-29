@@ -266,3 +266,8 @@ body {
 .section.fixedHeightTable {
   height:		180px;
 }
+
+tr {
+  width:		calc(100% - 20px)
+}
+}
