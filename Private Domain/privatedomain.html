@@ -6,10 +6,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Private Domain Mockup</title>
   <link rel="stylesheet" type="text/css" href="css/pdstyles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
 
 </head>
 
 <body>
+
+<div class="controls">
+<button onclick="toggleExisting()">Toggle existing claims</button>
+<button onclick="toggleOnline()">Toggle online notification</button>
+</div>
 
 <div class="wrapper">
   <div class="navigation">
@@ -19,8 +27,11 @@
   </div>
 
   <div class="content">
+
+<div id="existing">
+    <h2>Existing claims</h2>
        <div class="section blue">
-    <h3>Existing claims</h3>
+    <h3>Claims already reported on this policy</h3>
     </div>
     <div class="section">
       <table cellspacing="0" cellpadding="0">
@@ -43,35 +54,43 @@
           <td>Closed</td>
         </tr>
       </table>
-     
+   
     </div>
+</div>
+
     <h2>Tell us about an incident</h2>
+
+<div id="online">
     <div class="section blue">
     <h3>Online - All day everyday</h3>
     </div>
 
     <div class="section">
-      <p><strong>Online - All day everyday</strong></p>
-      <p>Use our fast, online claims service to report an incident in the following cirumstances</p>
-      <div class="claimType"><img src="images/parking.png">Your vehicle was damaged whilst parked (excluding vandalism)</div>
-      <div class="claimType"><img src="images/weather.png">Damage caused by a storm or bad weather</div>
-      <div class="claimType"><img src="images/crash.png">An accident with up to 1 other vehicle</div>
-      <div class="claimType"><img src="images/glass.png">Damage to your windscreen</div>
+      <p><strong>If the incident happened in the UK, you can use our fast, online claims service to report an incident in the following cirumstances:</strong></p>
+      <div class="claimType"><img src="images/injury.png"><div class="text">No people were injured</div></div>
+      <div class="claimType"><img src="images/parking.png"><div class="text">Your vehicle was damaged whilst parked (excluding vandalism)</div></div>
+      <div class="claimType"><img src="images/weather.png"><div class="text">Damage caused by a storm or bad weather</div></div>
+      <div class="claimType"><img src="images/crash.png"><div class="text">An accident with up to 1 other vehicle</div></div>
+      <div class="claimType"><img src="images/glass.png"><div class="text">Damage to your windscreen</div></div>
       </br>
       <div class="button">Report a new incident</div>       <div class="button">Retrieve a saved incident</div> 
     </div>
+</div>
+
     <div class="section blue">
-    <h3>By Phone</h3>
+    <h3>By Phone - 9am to 8pm Monday to Friday, 9am to 5pm Saturday</h3>
     </div>
     <div class="section">
-      <p><strong>By Phone - All day everyday</strong></p>
-      <p>Use our fast, online claims service to report an incident in the following cirumstances</p>
+      <p><strong>Our UK-based team is ready to help if you need to make a claim</strong></p>
+      <h2 class="phoneNumber">0330 024 1305</h2>
+      <p>Emergency assistance is available 24hrs per day, 7 days per week</p>
+
       
-    </div>
+    </div><hr>
 
     <h2>Claims checklist for car accidents</h2>
     <div class="accordion-wrapper">
-    <button class="accordion">More Information</button>
+    <button class="accordion"><i class="fas fa-angle-down"></i>More Information</button>
     <div class="panel">
       <ul>
         <li>
@@ -98,14 +117,14 @@
 
     <h2>Frequently Asked Questions</h2>
     <div class="accordion-wrapper">
-    <button class="accordion">Can I use my own preferred repairer?</button>
+    <button class="accordion"><i class="fas fa-angle-down"></i>Can I use my own preferred repairer?</button>
     <div class="panel">
-      <p>Yes, but to ensure your repairs are carried out to the vehicle manufacturer’s specifications and guaranteed, for your own convenience we would recommend you use one of our approved repairers. However, if you choose to use your own repairer, you wouldn’t get a courtesy car from us, and any car provided by your repairer would have to be insured by you. We also won’t be able to help you with any problems you might have with the repairs.</p>
+      <p>Yes, but to ensure your repairs are carried out to the vehicle manufacturer's specifications and guaranteed, for your own convenience we would recommend you use one of our approved repairers. However, if you choose to use your own repairer, you wouldn't get a courtesy car from us, and any car provided by your repairer would have to be insured by you. We also won't be able to help you with any problems you might have with the repairs.</p>
     </div>
     </div>
 
     <div class="accordion-wrapper">
-    <button class="accordion">Can I choose when I have my car repaired?</button>
+    <button class="accordion"><i class="fas fa-angle-down"></i>Can I choose when I have my car repaired?</button>
     <div class="panel">
       <p>Yes, but if your vehicle is immobile or unroadworthy, our approved repairer will collect your vehicle within 24 hours, subject to availability, and supply a courtesy vehicle.</p>
     </div>
@@ -113,15 +132,15 @@
 
 
     <div class="accordion-wrapper">
-    <button class="accordion">Will I be provided with a courtesy vehicle?</button>
+    <button class="accordion"><i class="fas fa-angle-down"></i>Will I be provided with a courtesy vehicle?</button>
     <div class="panel">
-      <p>Yes, if your car is repaired by one of our approved repairers, you’ll be given a small courtesy car. If you have taken out our courtesy car upgrade, we’ll ensure the car you get is a similar size to your own.</p>
+      <p>Yes, if your car is repaired by one of our approved repairers, you'll be given a small courtesy car. If you have taken out our courtesy car upgrade, we'll ensure the car you get is a similar size to your own.</p>
     </div>
     </div>
 
 
     <div class="accordion-wrapper">
-    <button class="accordion">Will the repair be guaranteed?</button>
+    <button class="accordion"><i class="fas fa-angle-down"></i>Will the repair be guaranteed?</button>
     <div class="panel">
       <p>Yes, we provide a lifetime guarantee when you use our approved repairers, for as long as you own the vehicle.</p>
     </div>
@@ -129,7 +148,7 @@
 
 
     <div class="accordion-wrapper">
-    <button class="accordion">Will the repair invalidate my manufacturer’s warranty?</button>
+    <button class="accordion"><i class="fas fa-angle-down"></i>Will the repair invalidate my manufacturer's warranty?</button>
     <div class="panel">
       <p>No, as we insist that our approved network repairs vehicles in line with manufacturer and Thatcham Research Centre guidelines.</p>
     </div>
@@ -157,6 +176,26 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+
+function toggleExisting() {
+  var x = document.getElementById("existing");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function toggleOnline() {
+  var x = document.getElementById("online");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
 </script>
 
 </body>

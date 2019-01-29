@@ -12,6 +12,7 @@ body {
   color:		#656d7d;
   font-family:		arial,sans-serif;
   font-size:		14px;
+  line-height:		20px;
   padding:		0 7px;
 
 }
@@ -79,16 +80,23 @@ a:hover, a:focus {
   padding:		10px 15px;
   width:		75%;
 }
+.text {
+  display:		inline-flex;
+  width:		calc(100% - 60px)
+}
 
 .section {
   padding:		15px;
 }
 
-.section.blue{
+.section.blue {
   background:		#f2f6fa;
 }
+
+
 table {
   margin-bottom:	5px;
+  overflow-y:		auto;
   width:		100%;
 }
 
@@ -139,7 +147,7 @@ img {
   border-bottom:	1px solid #ccc;
   color:		#4b78be;
   cursor:		pointer;
-  font-size:		18px;
+  font-size:		16px;
   outline:		none;
   padding:		9px;
   text-align:		left;
@@ -147,25 +155,48 @@ img {
   width:		100%;
 }
 
-.accordion:hover, .accordion:focus {
+.accordion:hover {
   background-color:	#f6f6f6;
 }
 
-.accordion:after {
-  content: 		"\02795";
-  font-size:		13px;
-  float:		right;
-  margin-left:		5px;
+.accordion i {
+  font-size:		18px;
+  margin-right:		20px;
 }
 
-.accordion.active:after {
-  content: 		"\2796";
+.accordion.active i {
+  transform:		rotate(-180deg);
 }
 
 .panel {
   padding:		8px;
   display:		none;
   overflow:		hidden;
+}
+
+.phoneNumber {
+  font-size:		28px;
+  margin:		0;
+  margin-bottom:	10px;
+}
+
+hr {
+  border-top: 		1px solid #cccccc;
+  border-bottom: 	none;
+}
+
+.controls {
+  background:		rgba(0, 0, 0, 0.05);
+  padding:		10px;
+  text-align:		center;
+  width:		100%;
+}
+
+
+li {
+  list-style-type:	disc;
+  margin-left:		20px;
+  margin-bottom:	10px;
 }
 
 @media only screen and (max-width: 980px) {
