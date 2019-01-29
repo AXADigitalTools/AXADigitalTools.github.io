@@ -82,6 +82,7 @@ a:hover, a:focus {
 }
 .text {
   display:		inline-flex;
+  vertical-align:	middle;
   width:		calc(100% - 60px)
 }
 
@@ -91,6 +92,12 @@ a:hover, a:focus {
 
 .section.blue {
   background:		#f2f6fa;
+}
+
+.section.fixedHeightTable {
+  display:		block;
+  height:		150px;
+  overflow-y:		auto;
 }
 
 
@@ -256,4 +263,6 @@ body {
   font-size:		12px; 
 }
 
+.section.fixedHeightTable {
+  height:		180px;
 }
