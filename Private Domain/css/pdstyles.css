@@ -266,6 +266,9 @@ body {
 .section.fixedHeightTable {
   height:		auto;
 }
-
+ 
+table {
+  width:    calc(100%-20px)
+}
 
 }
