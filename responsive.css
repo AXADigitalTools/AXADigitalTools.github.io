@@ -23,6 +23,12 @@
     width: 630px;
     margin: 0 auto 20px auto;
   }
+
+  .inital-panel {
+    width: 630px;
+    margin: 0 auto;
+  }
+
   .l-header-axa-logo {
     top: 14px;
   }
@@ -41,6 +47,13 @@
   header {
     height: 60px;
   }
+
+  .inital-panel {
+  font-size:12px;
+  line-height:18px;
+  width:100%;
+  }
+
   .l-header-axa-logo {
     height: 35px;
     width: 35px;
@@ -53,10 +66,12 @@
     display: none;
   }
   h1 {
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
   }
   h1 sup {
     display: inline-block;
     padding-right: 15px;
+    vertical-align: baseline;
   }
 }
