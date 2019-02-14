@@ -1,3 +1,9 @@
+@font-face {
+  font-family: publico;
+  src: url("css/publico.otf") format("opentype");
+  src: url("css/publico.ttf")  format('truetype')
+}
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
