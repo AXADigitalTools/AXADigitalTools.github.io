@@ -93,7 +93,7 @@ header {
 }
 
 .progress-bar-text {
-    line-height: 14px;
+    line-height: 17px;
     padding: 0 10px;
     width: calc(100% - 20px);
 }
@@ -109,6 +109,7 @@ header {
 .inital-panel {
   padding:16px 0;
   margin:0;
+  text-align:center;
 }
 
 /* Main section containing questions */
