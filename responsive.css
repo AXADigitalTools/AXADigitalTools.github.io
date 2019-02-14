@@ -1,0 +1,62 @@
+/* Large Layout for portrait mode tablets and window sizes up to 1200px wide */
+
+@media only screen and (max-width: 1199px) {
+  .full, .full-tab {
+    width: 960px;
+  }
+  .enol-section, .enol-section-panel {
+    width: 610px;
+  }
+  .l-header-axa-logo {
+    height: 43px;
+    width: 43px;
+  }
+}
+
+/* Medium Layout for tablets and window sizes up to 992px wide */
+
+@media only screen and (max-width: 991px) {
+  .full, .full-tab {
+    width: 720px;
+  }
+  .enol-section, .enol-section-panel {
+    width: 630px;
+    margin: 0 auto 20px auto;
+  }
+  .l-header-axa-logo {
+    top: 14px;
+  }
+}
+
+/* Small Layout for mobiles and window sizes up to 768px wide */
+
+@media only screen and (max-width: 767px) {
+  .full, .full-tab {
+    width: 100%;
+    max-width: 720px;
+  }
+  .enol-section, .enol-section-panel {
+    width: 100%;
+  }
+  header {
+    height: 60px;
+  }
+  .l-header-axa-logo {
+    height: 35px;
+    width: 35px;
+  }
+  .progress-bar-item, .progress-bar-item-is-active {
+    justify-content: center;
+    padding-left: 0;
+  }
+  .progress-bar-text {
+    display: none;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  h1 sup {
+    display: inline-block;
+    padding-right: 15px;
+  }
+}
