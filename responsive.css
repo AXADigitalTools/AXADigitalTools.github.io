@@ -40,23 +40,28 @@
   .full, .full-tab {
     width: 100%;
     max-width: 720px;
+    padding: 0;
   }
   .enol-section, .enol-section-panel {
     width: 100%;
+    border-left:transparent;
+    border-right:transparent;
+    box-shadow:none;
   }
   header {
     height: 60px;
   }
 
   .inital-panel {
-  font-size:12px;
-  line-height:18px;
-  width:100%;
+    font-size:12px;
+    line-height:18px;
+    width:100%;
   }
 
   .l-header-axa-logo {
     height: 35px;
     width: 35px;
+    margin-left:15px;
   }
   .progress-bar-item, .progress-bar-item-is-active {
     justify-content: center;
