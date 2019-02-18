@@ -244,12 +244,12 @@ h1.grey {
 .ContexualLabel-div {
     display: inline-block;
     width: calc(100% - 20px);
+    font-weight:bold;
 }
 
 .ContextualHelpIcon-div {
     display: inline-block;
     vertical-align:top;
-    font-weight:bold;
 }
 
 .info-icon, .info-icon-span {
