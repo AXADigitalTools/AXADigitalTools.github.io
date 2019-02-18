@@ -88,6 +88,8 @@ header {
     text-align: center;
 }
 
+/* Active Steps */
+
 .progress-bar-icon-is-active span.progress-bar-icon-text {
     background: #027180;
     border-color: transparent;
@@ -99,6 +101,17 @@ header {
     font-weight:bold;
     color: #027180;
 
+}
+
+/* Completed steps */
+
+.progress-bar-item-previous {
+    font-weight: bold;
+    color: #00008f;
+}
+
+.progress-bar-item-previous .progress-bar-icon-text {
+    border-color:#00008f;
 }
 
 .left, .rightlast {
