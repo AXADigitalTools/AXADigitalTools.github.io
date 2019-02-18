@@ -196,7 +196,6 @@ h1.grey {
 
 .sidebar {
     background-color:#fff;
-    border: 1px solid #2f29c4;
     display: block;
     position: absolute;
     right: -380px;
@@ -239,6 +238,7 @@ h1.grey {
 
 .enol-questions.help {
   padding: 10px 30px;
+  border: 1px solid #2f29c4;
 }
 
 .enol-questions.help p {
