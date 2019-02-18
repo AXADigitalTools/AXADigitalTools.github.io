@@ -4,6 +4,8 @@
   src: url("css/publico.ttf")  format('truetype')
 }
 
+/* Reset I always put in to remove any browser/device generated CSS */
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -17,6 +19,7 @@
 outline: none;
 }
 
+/* Setting defaults and containers */
 
 body {
   background-color:#fafafa;
@@ -24,12 +27,15 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.full, .l-progress-bar, .container-fluid {
+.full, .l-progress-bar, .container {
     width: 1140px;
     margin: 0 auto;
     height: 100%;
     padding: 0 15px;
 }
+
+
+/* Header and logo */
 
 header {
   height: 70px;
@@ -49,7 +55,7 @@ header {
     background-color: #fff;
     display: flex;
     border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 4px solid #ccc;
 }
 
 .progress-bar-item, .progress-bar-item-is-active, .progress-bar-item-previous {
@@ -68,9 +74,13 @@ header {
     align-self: center;
 }
 
+/* This removes the right border on the last element in the steps. This currently doesnt work because there are 2 hidden unneccessary steps with the class left & rightlast, once removed this will work whether we have 4 steps or 100 steps */
+
 .l-progress-bar>:last-child {
     border-right: none!important;
 }
+
+/* Inactive / default step style */
 
 .progress-bar-text {
     line-height: 17px;
@@ -114,28 +124,8 @@ header {
     border-color:#00008f;
 }
 
-.left, .rightlast {
-    display: none;
-}
 
-/* Progress indicator */
-
-.mobile-progress-indicator-container {
-  height: 4px;
-  background-color: #d8d8d8;
-  position: absolute;
-  bottom: -4px;
-  width: 100%;
-}
-
-.progress-indicator {
-  background-color: #f07662;
-  height:4px;
-  width:20px;
-}
-
-
-/* Text below steps */
+/* section between steps and main questions container */
 
 .inital-panel {
   padding:16px 0;
@@ -185,9 +175,10 @@ h1.grey {
 }
 
 
-/* Stuff I've turned off to help me see */
+/* Stuff I've turned off to help me see (apart from the modal I think these elements and their children can be removed) */
 
-.enol-dynamic-modal, #footer-statement, .mobile-menu-section {
+.enol-dynamic-modal, #footer-statement, .mobile-menu-section, .mobile-progress-indicator-container, .left, .rightlast {
+
    display:none;
 }
 
@@ -223,7 +214,7 @@ h1.grey {
     font-size: 20px;
 }
 
-.info {
+.sidebar h1 .info {
   background-color:#fff;
   border-radius: 50%;
   color: #2f29c4;
@@ -245,7 +236,7 @@ h1.grey {
     padding: 5px 0 10px 0;
 }
 
-
+/* This "collapse" class is currently required to make the helptext show/hide - this may/may not be needed if/when we do the helptext specific story */
 
 .collapse {
     display:none;
@@ -283,6 +274,7 @@ h1.grey {
 }
 
 /* Footer */
+
 footer {
     background-color: #3032c1;
     border-top: 1px rgba(255,255,255,.25) solid;
@@ -301,7 +293,7 @@ footer {
 
 @media only screen and (max-width: 1199px) {
 
-.full, .l-progress-bar, .container-fluid {
+.full, .l-progress-bar, .container {
     width: 960px;
 }
 
@@ -328,7 +320,7 @@ footer {
 /* Medium Layout for tablets and window sizes up to 992px wide */
 
 @media only screen and (max-width: 991px) {
-.full, .l-progress-bar, .container-fluid {
+.full, .l-progress-bar, .container {
     width: 720px;
 }
 
@@ -366,14 +358,13 @@ text-align:center;
 /* Small Layout for mobiles and window sizes up to 768px wide */
 
 @media only screen and (max-width: 767px) {
-  .full, .l-progress-bar, .container-fluid {
+
+  .full, .l-progress-bar, .container {
     width: 100%;
-    padding: 0;
+    padding: 0 15px;
   }
   .enol-section, .enol-section-panel {
     width: 100%;
-    border-left:transparent;
-    border-right:transparent;
     box-shadow:none;
   }
   header {
@@ -390,7 +381,6 @@ text-align:center;
   .l-header-axa-logo {
     height: 35px;
     width: 35px;
-    margin-left:15px;
   }
   .progress-bar-item, .progress-bar-item-is-active, .progress-bar-item-previous {
     justify-content: center;
@@ -408,4 +398,5 @@ text-align:center;
     padding-right: 15px;
     vertical-align: baseline;
   }
+
 }
