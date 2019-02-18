@@ -52,7 +52,7 @@ header {
     border-bottom: 1px solid #ccc;
 }
 
-.progress-bar-item, .progress-bar-item-is-active {
+.progress-bar-item, .progress-bar-item-is-active, .progress-bar-item-previous {
     border-right: 1px solid #ccc;
     color: #7f7f7f;
     display: inline-flex;
@@ -64,7 +64,7 @@ header {
     width: 25%;
 }
 
-.progress-bar-item span, .progress-bar-item-is-active span {
+.progress-bar-item span, .progress-bar-item-is-active span, .progress-bar-item-previous span {
     align-self: center;
 }
 
@@ -379,7 +379,7 @@ text-align:center;
     width: 35px;
     margin-left:15px;
   }
-  .progress-bar-item, .progress-bar-item-is-active {
+  .progress-bar-item, .progress-bar-item-is-active, .progress-bar-item-previous {
     justify-content: center;
     padding-left: 0;
   }
