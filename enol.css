@@ -174,7 +174,7 @@ h1.grey {
 
 /* Stuff I've turned off to help me see */
 
-.enol-dynamic-modal, #footer-statement {
+.enol-dynamic-modal, #footer-statement, .mobile-menu-section {
    display:none;
 }
 
@@ -233,10 +233,10 @@ h1.grey {
 }
 
 
-/*
+
 .collapse {
     display:none;
-}*/
+}
 
 /* Question area */
 
