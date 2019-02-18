@@ -1,0 +1,398 @@
+@font-face {
+  font-family: publico;
+  src: url("css/publico.otf") format("opentype");
+  src: url("css/publico.ttf")  format('truetype')
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position:relative;
+}
+
+*:focus {
+outline: none;
+}
+
+
+body {
+  background-color:#fafafa;
+  color: #333;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.full, .l-progress-bar, .container-fluid {
+    width: 1140px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 15px;
+}
+
+header {
+  height: 70px;
+  width: 100%;
+  background-color:#fff;
+}
+
+.l-header-axa-logo {
+  height:54px;
+  width:54px;
+}
+
+
+/* Steps */
+
+.progress-bar-section {    
+    background-color: #fff;
+    display: flex;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.progress-bar-item, .progress-bar-item-is-active {
+    border-right: 1px solid #ccc;
+    color: #7f7f7f;
+    display: inline-flex;
+    float: left;
+    font-size: 14px;
+    height: 51px;
+    padding-left: 20px;
+    text-align: left;
+    width: 25%;
+}
+
+.progress-bar-item span, .progress-bar-item-is-active span {
+    align-self: center;
+}
+
+.l-progress-bar>:last-child {
+    border-right: none!important;
+}
+
+.progress-bar-text {
+    line-height: 17px;
+    padding: 0 10px;
+    width: calc(100% - 20px);
+}
+
+
+.progress-bar-icon-text {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.progress-bar-icon-is-active span.progress-bar-icon-text {
+    background: #027180;
+    border-color: transparent;
+    color: #fff;
+
+}
+
+.progress-bar-item-is-active {
+    font-weight:bold;
+    color: #027180;
+
+}
+
+.left, .rightlast {
+    display: none;
+}
+
+/* Progress indicator */
+
+.mobile-progress-indicator-container {
+  height: 4px;
+  background-color: #d8d8d8;
+  position: absolute;
+  bottom: -4px;
+  width: 100%;
+}
+
+.progress-indicator {
+  background-color: #f07662;
+  height:4px;
+  width:20px;
+}
+
+
+/* Text below steps */
+
+.inital-panel {
+  padding:16px 0;
+  margin:0;
+  text-align:center;
+}
+
+/* Main section containing questions */
+
+.enol-section, .enol-section-panel {
+
+width:730px;
+display:inline-block;
+box-shadow: 0 1px 9px 0 #cccccc;
+border: 1px solid #ccc;
+background-color: #fafafa;
+margin-bottom:20px;
+
+}
+
+h1 {
+    background: #fff;
+    border-bottom:1px solid #ccc;
+    font-family: 'Publico', serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 14px 30px;
+}
+
+h1 sup {
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h1.grey {
+    background-color: #f5f5f5;
+    border-bottom: transparent;
+    color: #999;
+}
+
+.enol-questions {
+    font-size: 16px;
+    font-weight: normal;
+    padding: 20px 30px;
+}
+
+
+/* Stuff I've turned off to help me see */
+
+.enol-dynamic-modal, #footer-statement {
+   display:none;
+}
+
+
+/* HelpText */
+
+.sidebar {
+    background-color:#fff;
+    border: 1px solid #2f29c4;
+    display: block;
+    position: absolute;
+    right: -380px;
+    width: 350px;
+    top: 0;
+}
+
+.sidebar::after {
+    border: 10px solid transparent;
+    border-right-color:#2f29c4;
+    content: '';
+    display: block;
+    height: 0;
+    left: -20px;
+    position: absolute;
+    top: 17px;
+    width: 0;
+}
+
+.sidebar h1 {
+    background-color: #2f29c4;
+    border-bottom: none;
+    color: #fff;
+    padding: 17px 30px;
+    font-size: 20px;
+}
+
+.info {
+  background-color:#fff;
+  border-radius: 50%;
+  color: #2f29c4;
+  display: inline-block;
+  font-family: 'Source Sans Pro', sans-serif!important;
+  height: 20px;
+  line-height: 20px;
+  margin-right: 10px;
+  text-align: center;
+  width: 20px;
+}
+
+.enol-questions.help {
+  padding: 10px 30px;
+}
+
+.enol-questions.help p {
+    padding: 5px 0 10px 0;
+}
+
+
+/*
+.collapse {
+    display:none;
+}*/
+
+/* Question area */
+
+
+.ContexualLabel-div {
+    display: inline-block;
+    width: calc(100% - 20px);
+}
+
+.ContextualHelpIcon-div {
+    display: inline-block;
+    vertical-align:top;
+    font-weight:bold;
+}
+
+.info-icon, .info-icon-span {
+    background-color: #2f29c4;
+    border-radius: 50%;
+    border:none;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    height: 16px;
+    line-height: 14px;
+    width: 16px;
+}
+.info-icon-span {
+    top: -2px;
+    position: relative;
+    margin: 0 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #3032c1;
+    border-top: 1px rgba(255,255,255,.25) solid;
+    color: #fff;
+    font-size: 12px;
+    height: auto;
+    padding: 10px 0;
+    text-align: right;
+    width: 100%;
+}
+
+
+
+
+/* Large Layout for portrait mode tablets and window sizes up to 1200px wide */
+
+@media only screen and (max-width: 1199px) {
+
+.full, .l-progress-bar, .container-fluid {
+    width: 960px;
+}
+
+.enol-section, .enol-section-panel {
+    width: 610px;
+}
+
+.l-header-axa-logo {
+    height: 43px;
+    width: 43px;
+}
+
+.sidebar {
+    right: -320px;
+    width: 290px;
+}
+
+.sidebar h1 {
+    font-size: 18px;
+}
+
+}
+
+/* Medium Layout for tablets and window sizes up to 992px wide */
+
+@media only screen and (max-width: 991px) {
+.full, .l-progress-bar, .container-fluid {
+    width: 720px;
+}
+
+.enol-section, .enol-section-panel {
+    width: 630px;
+    margin: 0 auto 20px auto;
+}
+
+.inital-panel {
+    width: 630px;
+    margin: 0 auto;
+}
+
+.l-header-axa-logo {
+    top: 14px;
+}
+
+.sidebar {
+    left:0;
+    margin-bottom:20px;
+    position: relative;
+    top: 10px;
+    width: 100%;
+}
+.sidebar::after {
+    display:none;
+}
+
+footer {
+text-align:center;
+}
+
+}
+
+/* Small Layout for mobiles and window sizes up to 768px wide */
+
+@media only screen and (max-width: 767px) {
+  .full, .l-progress-bar, .container-fluid {
+    width: 100%;
+    padding: 0;
+  }
+  .enol-section, .enol-section-panel {
+    width: 100%;
+    border-left:transparent;
+    border-right:transparent;
+    box-shadow:none;
+  }
+  header {
+    height: 60px;
+  }
+
+  .inital-panel {
+    font-size:12px;
+    line-height:18px;
+    width:100%;
+    padding:12px 15px;
+  }
+
+  .l-header-axa-logo {
+    height: 35px;
+    width: 35px;
+    margin-left:15px;
+  }
+  .progress-bar-item, .progress-bar-item-is-active {
+    justify-content: center;
+    padding-left: 0;
+  }
+  .progress-bar-text {
+    display: none;
+  }
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+  }
+  h1 sup {
+    display: inline-block;
+    padding-right: 15px;
+    vertical-align: baseline;
+  }
+}
