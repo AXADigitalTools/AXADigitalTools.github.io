@@ -69,7 +69,7 @@
 
 .mainsectionHeading span {
   display: block;
-  font-family: 'Source Sans Pro', sans-serif;!important;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   font-weight: normal;
 }
@@ -273,7 +273,7 @@ footer li a {
   }
 
   .mainsectionHeading {
-    font-family: 'Source Sans Pro', sans-serif;!important;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
   }
 
@@ -307,6 +307,10 @@ footer li a {
 
   .mainsectionBody div.option.selected:after {
     top: calc(50% - 8px);
+  }
+
+  .sidebar.help .sidebarHeading  {
+    font-family: 'Source Sans Pro', sans-serif;
   }
 
 }
