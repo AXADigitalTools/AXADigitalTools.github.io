@@ -195,6 +195,16 @@
   border-width: 10px;
 }
 
+.sidebarContent {
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  padding-top:20px;
+}
+
+.sidebarContent p {
+  margin:5px 0 16px 0;
+}
+
 .info {
   border: 1px solid #fff;
   border-radius: 50%;
@@ -249,6 +259,10 @@ footer li a {
 
   .sidebar.help .sidebarHeading:after  {
     display:none;
+  }
+
+  .sidebarContent {
+    padding-top: 10px;
   }
 
 }
@@ -311,6 +325,10 @@ footer li a {
 
   .sidebar.help .sidebarHeading  {
     font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  .sidebarContent {
+    font-size: 14px;
   }
 
 }

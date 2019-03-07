@@ -144,6 +144,7 @@ button {
   left: 0;
   box-shadow:none;
   margin-bottom:5px;
+  padding:0;
 }
 
 .footer {
@@ -179,7 +180,9 @@ height:60px;
 
 
 .gutter {
- border-width:15px;
+  padding-left: 15px!important;
+  padding-right: 15px!important;
+
 }
 
 .topPanel {
