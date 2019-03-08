@@ -218,6 +218,11 @@
   width: 20px;
 }
 
+.sidebarHeading .info {
+  background-color:#fff;
+  color:#2f29c4;
+}
+
 .subFooter {
   background-color: #3032c1;
   color: #ffffff;
