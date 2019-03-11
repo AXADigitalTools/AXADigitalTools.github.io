@@ -286,6 +286,7 @@ footer li a {
   }
 
   .step {  
+    border-right-color:transparent;
     justify-content: center;
     padding-left: 0;
   }
