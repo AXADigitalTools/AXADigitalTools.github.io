@@ -1,0 +1,136 @@
+a { color: #00008f; } a:hover { color: #00005b; }
+
+p { 
+  font-size:18px;
+  letter-spacing:0.18px;
+  line-height:27px;
+}
+
+.content {
+  background-color: #fff;
+}
+
+.logo {
+  background: rgba(20, 0, 0, 0.2);
+  height: 54px;
+  width: 54px;
+}
+
+.breadcrumb {
+  background-color: #fafafa;
+  border-top:1px solid #e5e5e5;
+  color: #636b72;
+  padding: 15px 0;
+}
+
+
+.breadcrumb p {
+  font-size:16px;
+  letter-spacing:0.28px;
+  line-height:20px;
+}
+
+h1 {
+  font-family:'publico';
+  font-size:44px;
+  margin: 28px 0;
+}
+
+.menu li {
+  display: inline-block;
+  background: #00008f;
+  padding: 20px 30px;
+  color: #fff;
+  border-radius: 3px;
+  border:2px solid transparent;
+  margin-bottom: 20px;
+  overflow:hidden;
+  width:29%;
+}
+
+.menu li.ghost {
+  background: #fff;
+  color: #00008f;
+  border-radius: 3px;
+  border:2px solid #00008f;
+}
+
+.menu li.ghost:hover {
+  color: #fff;
+}
+
+.menu li span {
+    z-index: 99;
+}
+
+.menu li::before {
+  background: #00005b;
+  content:"";
+  display: block;
+  height: 560px;
+  left:50%;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%,-50%,0) rotate(45deg);
+  transition: all 0.3s;
+  width: 0;
+}
+
+.menu li:hover::before {
+    width: 100%;
+}
+
+.subFooter {
+  background-color: #3032c1;
+  color: #ffffff;
+  padding: 10px 0;
+}
+
+footer li {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    list-style: none;
+    margin: 5px;
+}
+
+footer li a {
+  color: #ffffff;
+  text-decoration:none;
+}
+
+
+/* Large Layout for portrait mode tablets and window sizes up to 1200px wide */
+
+@media only screen and (max-width: 1199px) {
+  .logo {
+    height: 43px;
+    width: 43px;
+  }
+
+}
+
+/* Medium Layout for tablets and window sizes up to 992px wide */
+
+@media only screen and (max-width: 991px) {
+  .logo {
+    top: 14px;
+  }
+
+
+}
+
+/* Small Layout for mobiles and window sizes up to 768px wide */
+
+@media only screen and (max-width: 767px) {
+
+  .logo {
+    height: 35px;
+    width: 35px;
+  }
+
+  .menu li {
+    width:100%;
+  }
+
+}
