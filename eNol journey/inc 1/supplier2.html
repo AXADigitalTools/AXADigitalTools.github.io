@@ -1,0 +1,235 @@
+<html>
+<head>
+	<title>Next Steps - Step Four - eNol Prototype</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+</head>
+
+
+<body>
+
+<header>
+	<div class="full">
+	<img src="images/logo.png" style="height: 50px; float: left;">
+	</div>
+</header>
+	
+<div id="myHeader">
+
+	<header class="breadcrumb">
+	<div class="full">
+	<div class="left step complete"><span class="number">1</span> About the incident</div>
+	<div class="step complete"><span class="number">2</span> About the damage</div>	
+	<div class="step complete"><span class="number">3</span> About you & your vehicle</div>
+	<div class="step current"><span class="number">4</span> Next Steps</div>
+	</header>
+	<div class="progress"><div class="current" style="width:75%;"></div></div>
+</div>
+
+<div class="wrapper full">
+
+<div class="main">
+
+<div class="section">
+	<h1><sup>1/2</sup>Before you choose your next step</h1>
+	
+<div class="questions">
+
+	<h4><img src="images/coins_pound_blue_x1.png" style="width: 52px;vertical-align:  middle;margin-right: 10px;">Your excess will be £150<span class="info">i</span></h4>
+        <p style="margin-left: 62px;margin-top: -30px;margin-bottom: 30px;">You only need to pay this claim excess if you claim for damage to your own vehicle.<br><a class="nextsteps iconlink" href="#" onclick="showexcess()">How is my excess calculated?</a></p>
+	
+<div class="hidden" id="excesstable">
+<table class="excesstable">
+        <thead>
+            <tr>
+                <th>Compulsory</th>
+                <th>Voluntary</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> £100</td>
+                <td>£50</td>
+                <td> £150</td> 
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+	<hr noshade="" style="border-color: #fafafa;border-bottom-color: #cccccc;">
+
+	<h4><img src="images/ncd_blue_x1.png" style="width: 52px;vertical-align:  middle;margin-right: 10px;">Your no claims discount will be affected</h4>
+        <p style="margin-left: 62px;margin-top: -30px;margin-bottom: 30px;">You can see how this will affect you on page 2 of your policy schedule.<br><a class="nextsteps iconlink" href="#">View your policy schedule<img src="images/arrow-pointing-to-right.png"></a></p>
+	<hr noshade="" style="border-color: #fafafa;border-bottom-color: #cccccc;">
+
+	<h4>If we are able to establish that somebody else is at fault, your excess may be refunded and your no claims discount restored.</h4>
+
+	<input type="radio" id="continue1" name="info" data-related-item="damageyes">
+	<label for="continue1" class="options">choose my next step</label>
+
+</div> <!--end of questions-->
+
+</div> <!--end of section-->
+
+
+<div class="section">
+	<h1 class="grey" id="when"><sup>2/2</sup>Choose your next step</h1>
+	
+<div class="questions">
+
+	<h4>Would you like to report this as a claim or are you just letting us know about the incident? <span class="info">i</span></h4>
+
+        <p>If you think that the cost to repair your car will be less than your claim excess or you intend to claim directly from the person responsible for the damage then you do not need report this as a claim.</p>
+
+	<input type="radio" id="damageyes" name="damage" data-related-item="repaireryes">
+	<label for="damageyes" class="options">REPORT AS A CLAIM</label>
+
+	<input type="radio" id="damageno" name="damage" data-related-item="submitbtn">
+	<label for="damageno" class="options">Information Only</label>
+
+<div class="hidden">
+
+	<h4>We will instruct our approved repairer to contact you and arrange for the damage to be assessed.</h4>
+
+	<input type="radio" id="repaireryes" name="repairer">
+	<label for="repaireryes" class="options">YES that's fine</label>
+
+	<input type="radio" id="repairerno" name="repairer" data-related-item="manualrepairer">
+	<label for="repairerno" class="options">I want to choose my own repairer</label>
+
+</div> 
+	<a href="damage.html"><input type="button" value="Continue" disabled="disabled"></a>
+
+</div> <!--end of questions-->
+
+</div> <!--end of section-->
+
+
+</div> <!--end of main-->
+
+
+
+<div class="sidebar" id="sidebar">
+
+<h1><span class="info">i</span>What does this mean?</h1>
+
+<div class="section help">
+
+	<h4>Your Excess</h4>
+	<p>The excess shown is a sum of your compulsory and voluntary excess. You can see a breakdown of this sum by selecting How is my excess calculated?
+	</p>
+
+	<h4>Your no claims discount</h4>
+	<p>This is always affected if you make a claim until we can establish that somebody else is as fault.</p>
+
+</div> <!--end of section-->
+
+</div> <!--end of sidebar-->
+
+</div> <!--end of wrapper-->
+
+<footer>
+
+<div class="legal">
+
+	<p>Copyright AXA 2018 ©</p>
+	<p>AXA Insurance UK Plc is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority.</p>
+
+</div>
+
+</footer> <!--end of footer-->
+
+
+
+</body>
+
+
+
+
+
+<script>
+function evaluate(){
+    var item = $(this);
+    var relatedItem = $("#" + item.attr("data-related-item")).parent();
+   
+    if(item.is(":checked")){
+        relatedItem.fadeIn();
+    }else{
+        relatedItem.fadeOut();   
+    }
+}
+
+$('input[type="checkbox"]').click(evaluate).each(evaluate);
+</script>
+
+<script>
+function evaluate(){
+    var item = $(this);
+    var relatedItem = $("#" + item.attr("data-related-item")).parent();
+   
+    if(item.is(":checked")){
+        relatedItem.fadeIn();
+    }else{
+        relatedItem.fadeOut();   
+    }
+}
+
+$('input[type="radio"]').click(evaluate).each(evaluate);
+</script>
+
+ 
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+<script>
+
+$("#tags").keyup(function(){
+console.log($(this).val().length);
+if($(this).val().length)
+$("#submitbtn").prop('disabled', false);
+else
+$("#submitbtn").prop('disabled', true);
+});
+
+</script>
+
+<script>
+function showexcess() {
+    var x = document.getElementById("excesstable");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<script>
+
+var header1 = document.getElementById("when");
+
+var btn1 = document.getElementById("continue1");
+
+btn1.onclick = function() {
+    header1.style.background = "#fff";
+    header1.style.color = "#000";
+}
+
+</script>

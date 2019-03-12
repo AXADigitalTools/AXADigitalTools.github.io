@@ -1,0 +1,407 @@
+<html>
+<head>
+	<title>About the damage - Step Two - eNol Prototype</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+</head>
+
+
+<body>
+
+<header>
+	<div class="full">
+	<img src="images/logo.png" style="height: 50px; float: left;">
+	</div>
+</header>
+	
+<div id="myHeader">
+
+	<header class="breadcrumb">
+	<div class="full">
+	<div class="left step complete"><span class="number">1</span> About the incident</div>
+	<div class="step current"><span class="number">2</span> About the damage</div>	
+	<div class="step"><span class="number">3</span> About you & your vehicle</div>
+	<div class="step"><span class="number">4</span> Next Steps</div>
+	</header>
+	<div class="progress"><div class="current" style="width:32%;"></div></div>
+</div>
+
+<div class="wrapper full">
+
+	<p>Please answer all questions as accurately as possible.</p>
+	
+<div class="main">
+
+<div class="section">
+	<h1><sup>1/1</sup>About the damage</h1>
+	
+<div class="questions">
+
+
+	<h4>Is <em>your</em> vehicle damaged?<span class="info">i</span></h4>
+
+	<input type="radio" id="damageyes" name="damage" data-related-item="diagram">
+	<label for="damageyes" class="options">YES</label>
+
+	<input type="radio" id="damageno" name="damage" data-related-item="submitbtn">
+	<label for="damageno" class="options">NO</label>
+
+<div class="hidden">
+
+	<h4 id="diagram">Select the area(s) of your vehicle which have been <em>damaged</em>
+
+ <span class="info">i</span></h4>
+
+<div class="vehicle">
+
+
+<div class="damagedareas">
+
+
+<div class=carfront>
+					<div class="damage bumper" title="Front">
+   						<input type="checkbox" id="frontbumper" data-related-item="fb">
+						<label for="frontbumper"></label>
+					</div>
+					<div class="damage" style="height: 160px;" title="Front Left Side">
+   						<input type="checkbox" id="frontleft" data-related-item="fl">
+						<label for="frontleft"></label>
+					</div>
+					<div class="damage  small" style="right: 3px;width: 140px;" title="Bonnet">
+   						<input type="checkbox" id="bonnet" data-related-item="b">
+						<label for="bonnet"></label>
+					</div>
+					<div class="damage  small" style="right: -80px;top: -80px;width: 140px;" title="Windscreen">
+   						<input type="checkbox" id="windscreen" data-related-item="w">
+						<label for="windscreen"></label>
+					</div>
+					
+					<div class="damage" style="top: -160px;left: 77px;height: 160px;" title="Front Right Side">
+   						<input type="checkbox" id="frontright" data-related-item="fr">
+						<label for="frontright"></label>
+					</div>
+
+</div>
+<div class="carmiddle">
+					<div class="damage" title="Front Left Door">
+   						<input type="checkbox" id="frontleftdoor" data-related-item="fld">
+						<label for="frontleftdoor"></label>
+					</div>
+					<div class="damage" style="height: 180px;left: -3px;width: 140px;" title="Roof">
+   						<input type="checkbox" id="roof" data-related-item="r">
+						<label for="roof"></label>
+					</div>
+					<div class="damage" style="top: -180px;left: 220px;" title="Front Right Door">
+   						<input type="checkbox" id="frontrightdoor" data-related-item="frd">
+						<label for="frontrightdoor"></label>
+					</div>
+					<div class="damage" style="top: -90px;left: -83px;" title="Rear Left Door">
+   						<input type="checkbox" id="rearleftdoor" data-related-item="rld">
+						<label for="rearleftdoor"></label>
+					</div>
+
+					<div class="damage" style="top: -90px;left: 54px;" title="Rear Right Door">
+   						<input type="checkbox" id="rearrightdoor" data-related-item="rrd">
+						<label for="rearrightdoor"></label>
+					</div>
+</div>
+<div class=carrear>
+
+					<div class="damage" style="height: 160px;" title="Rear Left Side">
+   						<input type="checkbox" id="rearleft" data-related-item="rl">
+						<label for="rearleft"></label>
+					</div>
+					<div class="damage  small" style="right: 3px;width: 140px;" title="Rear Window">
+   						<input type="checkbox" id="rearwindow" data-related-item="rw">
+						<label for="rearwindow"></label>
+					</div>
+					<div class="damage  small" style="right: -80px;top: -80px;width: 140px;" title="Rear">
+   						<input type="checkbox" id="rear" data-related-item="bt">
+						<label for="rear"></label>
+					</div>
+					
+					<div class="damage" style="top: -160px;left: 77px;height: 160px;" title="Rear Right Side">
+   						<input type="checkbox" id="rearright" data-related-item="rr">
+						<label for="rearright"></label>
+					</div>
+
+</div>
+</div>
+
+</div> <!--end of vehicle-->
+
+<div class="damagelist">	
+<div class="hidden">
+	<h4>Other options</h4>
+					<div class="damage">
+   						<input type="checkbox" id="allover" data-related-item="all">
+						<label for="allover"></label> <p>Engine</p>
+					</div>	
+
+					<div class="damage">
+   						<input type="checkbox" id="engine" data-related-item="eng">
+						<label for="engine"></label>
+					</div>
+					<div class="damage">
+   						<input type="checkbox" id="underside" data-related-item="us">
+						<label for="underside"></label>
+					</div>
+					<div class="damage">
+   						<input type="checkbox" id="interior" data-related-item="int">
+						<label for="interior"></label>
+					</div>
+					
+				</div>		
+	
+	<h4>You have selected</h4>
+
+<div class="hidden">
+
+<label for="frontbumper" id="fb">Front <span class="close">&times;</span></label>
+
+</div>
+<div class="hidden">
+
+<label for="frontleft" id="fl">Front Left Side<span class="close">&times;</span></label>
+
+</div>
+<div class="hidden">
+
+<label for="frontright" id="fr">Front Right Side<span class="close">&times;</span></label>
+
+</div>
+<div class="hidden">
+
+<label for="bonnet" id="b">Bonnet<span class="close">&times;</span></label>
+
+</div>
+<div class="hidden">
+
+<label for="windscreen" id="w">Windscreen<span class="close">&times;</span></label>
+
+</div>
+<div class="hidden">
+
+<label for="frontleftdoor" id="fld">Front Left Door<span class="close">&times;</span></label>
+
+</div>
+<div class="hidden">
+
+<label for="rearleftdoor" id="rld">Rear Left Door<span class="close">&times;</span></label>
+
+</div>
+<div class="hidden">
+
+<label for="frontrightdoor" id="frd">Front Right Door<span class="close">&times;</span></label>
+
+</div>
+<div class="hidden">
+
+<label for="rearrightdoor" id="rrd"> Rear Right Door<span class="close">&times;</span></label>
+
+</div>
+<div class="hidden">
+
+<label for="roof" id="r"> Roof<span class="close">&times;</span></label>
+
+</div>
+<div class="hidden">
+
+<label for="rearleft" id="rl"> Rear Left Side<span class="close">&times;</span></label>
+
+</div>
+<div class="hidden">
+
+<label for="boot" id="bt"> Rear<span class="close">&times;</span></label>
+
+</div>
+
+<div class="hidden">
+
+<label for="rearwindow" id="rw"> Rear Windscreen<span class="close">&times;</span></label>
+
+</div>
+
+<div class="hidden">
+
+<label for="rearright" id="rr"> Rear Right Side<span class="close">&times;</span></label>
+
+</div>
+
+<br>
+	<input type="radio" id="dateconfirm" name="date" data-related-item="operableyes">
+	<label for="dateconfirm" class="options sienna" style="border-radius:0px;">Confirm damage</label>
+
+
+
+
+</div> <!--end of damagelist-->
+</div>
+
+
+<div class="hidden">
+
+	<h4>Are you able to <em>safely</em> drive your vehicle?<span class="info">i</span></h4>
+
+	<input type="radio" id="operableyes" name="operable" data-related-item="submitbtn">
+	<label for="operableyes" class="options">YES</label>
+
+	<input type="radio" id="operableno" name="operable" data-related-item="wherehome">
+	<label for="operableno" class="options">NO</label>
+
+	<input type="radio" id="operableunsure" name="operable" data-related-item="wherehome">
+	<label for="operableunsure" class="options">I don't know</label>
+
+</div>
+
+<div class="hidden">
+
+	<h4>Where is your vehicle<em>now</em>?<span class="info">i</span></h4>
+
+	<input type="radio" id="wherehome" name="where" data-related-item="submitbtn">
+	<label for="wherehome" class="options">At Home</label>
+
+	<input type="radio" id="whereaccidentlocation" name="where" data-related-item="submitbtn">
+	<label for="whereaccidentlocation" class="options">Accident Location</label>
+<br>
+	<input type="radio" id="whererepairer" name="where" data-related-item="whereabouts">
+	<label for="whererepairer" class="options">At a repairer or recovery yard</label>
+
+	<input type="radio" id="whereother" name="where" data-related-item="whereabouts">
+	<label for="whereother" class="options">Somewhere else</label>
+
+
+</div>
+
+<div class="hidden">
+
+	<h4>If you have the name or contact details for where the vehicle is<br>then please add them below (optional) <span class="info">i</span></h4>
+	<textarea id="whereabouts" rows="4" pattern=".{5,100}" required style="width: 630px;min-height: 80px;"></textarea>
+<br><br>
+	<input type="radio" id="whereaboutsconfirm" name="where2" data-related-item="submitbtn">
+	<label for="whereaboutsconfirm" class="options">Confirm</label>
+
+	<input type="radio" id="whereaboutsunsure"  name="where2" data-related-item="submitbtn">
+	<label for="whereaboutsunsure" class="options">Skip</label>
+</div>
+
+<div class="hidden">
+
+	<a href="supplier2.html" id="submitbtn" ><input type="button" value="Continue"></a>
+</div>
+
+
+</div> <!--end of questions-->
+
+</div> <!--end of section-->
+
+
+</div> <!--end of main-->
+
+
+
+
+<div class="sidebar" id="sidebar">
+	
+	<h1><span class="info">i</span>Vehicle Damage</h1>
+
+<div class="section help">
+	<h4>Accident</h4>
+	<p>Your vehicle vehicle was involved in an accident. This can include incidents where you weren't in the vehicle at the time.</p>
+
+</div> <!--end of section-->
+
+
+</div> <!--end of sidebar-->
+
+</div> <!--end of wrapper-->
+
+<footer>
+
+<div class="legal">
+
+	<p>Copyright AXA 2018 ©</p>
+	<p>AXA Insurance UK Plc is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority.</p>
+
+</div>
+
+</footer> <!--end of footer-->
+
+
+
+</body>
+
+
+
+
+
+<script>
+function evaluate(){
+    var item = $(this);
+    var relatedItem = $("#" + item.attr("data-related-item")).parent();
+   
+    if(item.is(":checked")){
+        relatedItem.fadeIn();
+    }else{
+        relatedItem.fadeOut();   
+    }
+}
+
+$('input[type="checkbox"]').click(evaluate).each(evaluate);
+</script>
+
+<script>
+function evaluate(){
+    var item = $(this);
+    var relatedItem = $("#" + item.attr("data-related-item")).parent();
+   
+    if(item.is(":checked")){
+        relatedItem.fadeIn();
+    }else{
+        relatedItem.fadeOut();   
+    }
+}
+
+$('input[type="radio"]').click(evaluate).each(evaluate);
+</script>
+
+ 
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+
+
+<script>
+  $( function() {
+    $( document ).tooltip({
+      position: {
+        my: "center bottom-20",
+        at: "center top",
+        using: function( position, feedback ) {
+          $( this ).css( position );
+          $( "<div>" )
+            .addClass( "arrow" )
+            .addClass( feedback.vertical )
+            .addClass( feedback.horizontal )
+            .appendTo( this );
+        }
+      }
+    });
+  } );
+</script>
