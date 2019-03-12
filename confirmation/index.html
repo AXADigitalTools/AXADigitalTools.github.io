@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>eNol Prototype</title>
+  <link rel="stylesheet" type="text/css" href="css/grid.css" />
+  <link rel="stylesheet" type="text/css" href="css/components.css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="content">
+
+<div class="header">
+  <div class="container">
+    <img class="logo" src="https://www.axa.co.uk/globalassets/axa_logo_solid_rgb.svg/">
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="container">
+    <div class="step complete"><span class="number">1</span><span class="text">About the incident</span></div>
+    <div class="step complete"><span class="number">2</span><span class="text">About the damage</span></div>
+    <div class="step complete"><span class="number">3</span><span class="text">About others</span></div>
+    <div class="step complete"><span class="number">4</span><span class="text">About you & your vehicle</span></div>
+    <div class="step current last"><span class="number">5</span><span class="text">Next Steps</span></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="topPanel">Thank you for telling us about your incident</div>
+
+  <div class="main" style="display:none;">
+    <div class="mainsectionHeading gutter claimNumber">Claim number 200-001-0001</div>
+
+  </div>
+
+  <div class="main">
+    <div class="mainsectionHeading gutter">What happens next?</div>
+<div class="sidebar pleaseRead">
+      <div class="sidebarHeading gutter" style="font-family: 'Source Sans Pro', sans-serif;"><span>Your reference is:</span>000-00-001385</div>
+      <div class="sidebarSubHeading gutter"><h4>We would like to draw your attention to the following key points</h4></div>
+      <div class="sidebarContent gutter">
+        <p>If we are able to establish that somebody was responsible for this incident then your excess may be refunded and your No Claims Discount restored.</p>
+        <p>We will handle all aspects of this incident on your behalf. We will make decisions on liability to third parties, their representatives or insurers.</p>
+        <p>In the event of your vehicle being declared a total loss, we will remove it to a safe place of storage chosen by us.</p>
+        <p>Please send us any correspondence you receive in connection with this incident quoting your reference.</p>
+      </div>
+      <div class="finish"><span>Finish</span></div>
+</div>
+
+
+    <div class="mainsectionBody gutter">
+
+      <h4><img src="images/tick_blue_circle.svg" class="icon">Your reference is 200-001-0001</h4>
+      <p class="text">Thank you for telling us about your incident. We are here to make the process as smooth as possible for you and have included some important information below about your incident. Please take the time to read it as it may answer any questions you have.</p>      
+      <hr style="border-color: transparent;border-bottom-color: #cccccc;">
+
+      <h4><img src="images/garage.svg" class="icon">Repairs to your vehicle</h4>
+      <p class="text">Instructions have to been sent to our approved repairer network, Vizion. They will be in touch within 2 working hours to arrange for the damage to be assessed.</p>
+      <hr style="border-color: transparent;border-bottom-color: #cccccc;">
+
+      <h4><img src="images/coins_pound.svg" class="icon">Excess</h4>
+      <p class="text">You will need to pay your excess of £0 to the repairer once your vehicle is repaired.
+      <br>
+      <a class="nextsteps iconlink" href="javascript:void();" onclick="showexcess()">How is my excess calculated?</a></p>
+	
+      <div class="hidden" id="excesstable" style="display: none;">
+      <table class="excesstable">
+        <thead><tr><th>Compulsory</th>  <th>Voluntary</th>  <th>Total</th> </tr></thead>
+        <tbody><tr>  <td> £100</td>  <td>£50</td>  <td> £150</td></tr></tbody>
+      </table>
+      </div>   </p>
+      <hr>
+
+      <h4><img src="images/car.svg" class="icon">Courtesy Car</h4>
+      <p class="text">Our approved repairer will provide you with a courtesy car whilst your vehicle is being repaired.      <br>
+      <a class="nextsteps iconlink" href="javascript:void();">Read more</a></p>
+      <hr>
+
+      <h4><img src="images/ncd.svg" class="icon">No Claims Discount</h4>
+      <p class="text">Your No Claims Discount has been affected as a result of this claim being made against your policy.
+      <br>
+      <a class="nextsteps iconlink" href="javascript:void();" onclick="showNCD()">How is my NCD affected?</a></p>
+	
+      <div class="hidden" id="NCDtable" style="display: none;">
+       <table class="excesstable">
+        <thead><tr><th>Compulsory</th><th>Voluntary</th><th>Total</th></tr></thead>
+        <tbody>
+          <tr><td> £100</td>  <td>£50</td>  <td> £150</td> </tr>
+        </tbody>
+       </table>
+      </div>      </p>
+
+    </div>
+  </div>
+
+
+</div>
+
+</div>
+<footer class="footer">
+<div class="subFooter">
+<ul class="container">
+          <li><a href="https://www.axa.co.uk/accessibility/">Accessibility</a></li>
+          <li><a href="https://www.axa.co.uk/privacy-policy/" title="AXA's Privacy Policy">Privacy Policy</a></li>
+          <li><a href="https://www.axa.co.uk/terms-and-conditions/">Terms and conditions</a></li>
+          <li><a href="https://www.axa.co.uk/regulated/">Regulated</a></li>
+        <li>© Copyright 2019</li>
+</ul>
+</div>
+</footer>
+
+<script>
+function showexcess() {
+    var x = document.getElementById("excesstable");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<script>
+function showNCD() {
+    var x = document.getElementById("NCDtable");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+</body>
+
+</html>
