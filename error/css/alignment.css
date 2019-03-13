@@ -1,3 +1,7 @@
+*:focus {
+outline:none;
+}
+
 .error {
   background-color:#3b3fd8;
   color:#fff;
@@ -33,13 +37,60 @@ button {
   font-weight: 600;
   line-height: 18px;
   letter-spacing: 1px;
+  overflow:hidden;
   padding: 14px 20px;
-  transition:all 1s;
+  text-transform:uppercase;
 }
 
-button:hover, button:focus {
-  background-color: #fff;
+button span {
+   z-index: 99;
+}
+
+button:hover {
   color:#00008f;
   cursor:pointer;
-  outline:none;
+}
+
+button::before {
+  background: #fff;
+  content:"";
+  display: block;
+  height: 560px;
+  left:50%;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%,-50%,0) rotate(45deg);
+  transition: all 0.3s;
+  width: 0;
+}
+
+button:hover::before {
+    width: 100%;
+}
+
+/* Medium Layout for tablets and window sizes up to 992px wide */
+
+@media only screen and (max-width: 991px) {
+
+.inner {
+  padding:40px 0;
+}
+h2 {
+  font-size:48px;
+}
+
+}
+
+/* Small Layout for mobiles and window sizes up to 768px wide */
+
+@media only screen and (max-width: 767px) {
+
+h2 {
+  font-size:40px;
+}
+
+p {
+  font-size:14px;
+}
+
 }
