@@ -1,0 +1,45 @@
+.error {
+  background-color:#3b3fd8;
+  color:#fff;
+  min-height:calc(100% - 85px);
+}
+
+.redirect-error-message-box, .redirect-error-summary-box {
+  text-align:center;
+}
+
+.inner {
+  padding:80px 0;
+}
+
+h2 {
+  font-family:"publico", georgia;
+  font-size:52px;
+  margin-bottom: 26px;
+}
+
+p {
+  font-size:18px;
+  letter-spacing:0.1px;
+  margin-top:26px;
+}
+
+button {
+  background-color: transparent;
+  border:2px solid #fff;
+  color:#fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 1px;
+  padding: 14px 20px;
+  transition:all 1s;
+}
+
+button:hover, button:focus {
+  background-color: #fff;
+  color:#00008f;
+  cursor:pointer;
+  outline:none;
+}
