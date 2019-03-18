@@ -347,6 +347,10 @@ footer li a {
     padding-top: 10px;
   }
 
+  .button.continue {
+    width:calc(100% - 30px);
+  }
+
 }
 
 /* Small Layout for mobiles and window sizes up to 768px wide */
@@ -410,5 +414,8 @@ footer li a {
     font-family: 'Source Sans Pro', sans-serif;
   }
 
+  .button.continue {
+    width:100%;
+  }
 
 }
