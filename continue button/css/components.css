@@ -330,6 +330,10 @@ footer li a {
   .sidebarContent p {
     font-size: 14px;
   }
+  
+  .button.continue {
+    width:calc(100% - 15px);
+  }
 }
 
 /* Medium Layout for tablets and window sizes up to 992px wide */
@@ -347,9 +351,7 @@ footer li a {
     padding-top: 10px;
   }
 
-  .button.continue {
-    width:calc(100% - 15px);
-  }
+
 
 }
 
