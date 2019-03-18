@@ -348,7 +348,7 @@ footer li a {
   }
 
   .button.continue {
-    width:calc(100% - 30px);
+    width:calc(100% - 15px);
   }
 
 }
