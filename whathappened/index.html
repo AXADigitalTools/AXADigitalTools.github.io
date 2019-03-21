@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>What Happened? | eNol Prototype</title>
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/css.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+
+<body class="grey">
+<div class="content">
+<div class="container">
+<p>Sequence intentionally shortened to show new functionality</p>
+
+<div class="main inline">
+  <div class="mainsectionHeading white gutter">
+    <span>4/5</span> Who & which vehicle
+  </div>
+  <div class="mainsectionBody grey gutter">
+
+<section>
+    <div class="question">Who was driving?</div>
+    <input type="radio" id="driverPh" name="driver" class="options" value="I " data-next="question1">
+    <label for="driverPh"><span class="icon"></span>Me<br><br></label>
+    <input type="radio" id="namedDriver" name="driver" class="options" value="David " data-next="question1">
+    <label for="namedDriver"><span class="icon"></span>David<br><br></label>
+</section>
+</div>
+
+
+
+</div>
+
+  <div class="main inline">
+  <div class="mainsectionHeading gutter" id="whatHappenedTitle">
+    <span>5/5</span> What Happened?
+  </div>
+
+
+  <div class="mainsectionBody grey gutter">
+
+
+<section>
+
+  <div id="question1" class="conditional">
+    <div class="question">Using the options below tell us what happened</div>
+    <div class="inline statementText"><span class="who"></span> was </div>
+
+    <div class="dropdown inline">
+    <button class="dropbtn" id="dd1Title">Choose what</button>
+      <div class="ddContent">
+        <input type="radio" id="dd1" name="dd1" class="options filter" data-next="2" value="Driving in lane">
+        <label for="dd1" class="dd">Driving in lane</label>
+        <input type="radio" id="dd2" name="dd1" class="options filter" data-next="2" value="Parked">
+        <label for="dd2" class="dd">Parked</label>
+      </div>
+    </div>
+
+  <div id="2" class="conditional">
+    <div class="dropdown inline">
+    <button class="dropbtn" id="dd2Title">Choose where</button>
+      <div class="ddContent">
+        <input type="radio" id="dd2opt1" name="dd2" class="options filter" value="on a road" data-next="what">
+        <label for="dd2opt1" class="dd">on a road</label>
+        <input type="radio" id="dd2opt2" name="dd2" class="options filter" value="in a car park" data-next="what">
+        <label for="dd2opt2" class="dd">in a car park</label>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+<section>
+
+<div id="what" class="conditional full">
+  <div class="inline statementText">when <span id="when"></span></div>
+    <input type="radio" id="hit" name="what" class="options filter" value="hit" data-next="autocomplete">
+    <label for="hit" class="options">Hit</label>
+    <input type="radio" id="hitby" name="what" class="options filter" value="hitby" data-next="autocomplete">
+    <label for="hitby" class="options">was hit by</label>
+</div>
+
+</section>
+
+<section>
+
+<div id="autocomplete" class="conditional full">
+  <div class="inline statementText">a</div>
+  <div class="inline relative autocomplete"><input id="myInput" type="text" name="myCountry" placeholder="Start typing to search"  data-next="otherparty"></div>
+</div>
+
+</section>
+
+<section>
+
+<div id="otherparty" class="conditional full">
+  <div class="question">Using the options below tell us what the other vehicle was doing at the time</div>
+  <div class="inline statementText">The other vehicle was</div>
+  <div class="dropdown inline">
+    <button class="dropbtn" id="dd4Title">Choose what</button>
+      <div class="ddContent">
+        <input type="radio" id="dd4" name="dd4" class="options filter" data-next="5" value="Exiting">
+        <label for="dd4" class="dd">Exiting</label>
+        <input type="radio" id="dd5" name="dd4" class="options filter" data-next="5" value="Parked">
+        <label for="dd5" class="dd">Parked</label>
+      </div>
+    </div>
+
+  <div id="5" class="conditional">
+    <div class="dropdown inline">
+    <button class="dropbtn" id="dd5Title">Choose where</button>
+      <div class="ddContent">
+        <input type="radio" id="dd5opt1" name="dd5" class="options filter" value="a side road" data-next="what">
+        <label for="dd5opt1" class="dd">a side road</label>
+        <input type="radio" id="dd5opt2" name="dd5" class="options filter" value="in a car park" data-next="what">
+        <label for="dd5opt2" class="dd">in a car park</label>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+</div>
+
+</div>
+<!-- end of cotainer -->
+</div>
+<!-- end of content -->
+</div>
+
+<footer class="footer">
+<div class="subFooter">
+<ul class="container">
+        <li>© Copyright 2019</li>
+</ul>
+</div>
+
+
+<!-- JS for showing/hiding dynamic questions based on radio button input  -->
+
+<script>
+var buttons = document.getElementsByClassName('options');
+var questions = document.getElementsByTagName('div');
+
+for (var i = 0; i < buttons.length; i++) {
+  var button = buttons[i];
+  button.addEventListener('click', function() {
+    var target = this.getAttribute('data-next');
+    for (var j = 0; j < questions.length; j++) {
+      var question = questions[j];
+      if (question.id == target) {
+        question.classList.add('show');
+      } 
+    }
+  });
+}
+</script>
+
+<!-- Jquery for changing statement based on driver -->
+
+<script>
+$("input:radio[name=driver]").click(function() {
+ $('span.who').html($(this).val());
+ $('#when').html($(this).val());
+ $('#whatHappenedTitle').addClass("white");
+});
+</script>
+
+
+
+<!-- Jquery for changing parent div text to match selected dropdown -->
+
+<script>
+$("input:radio[name=dd1]").click(function() {
+ $("#dd1Title").addClass("checked");
+ $('#dd1Title').html($(this).val());
+})
+
+$("input:radio[name=dd2]").click(function() {
+ $("#dd2Title").addClass("checked");
+ $('#dd2Title').html($(this).val());
+})
+
+$("input:radio[name=dd3]").click(function() {
+ $("#dd3Title").addClass("checked");
+ $('#dd3Title').html($(this).val());
+})
+
+$("input:radio[name=dd4]").click(function() {
+ $("#dd4Title").addClass("checked");
+ $('#dd4Title').html($(this).val());
+})
+
+$("input:radio[name=dd5]").click(function() {
+ $("#dd5Title").addClass("checked");
+ $('#dd5Title').html($(this).val());
+})
+</script>
+
+<!-- Jquery for autocomplete -->
+<script>
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+/*Change style of the autocomplete field*/
+$("#myInput").css({'background-color':'#fff', 'color':'#333', 'border-color':'#00008f'});
+$("#otherparty").css({'display':'block'});
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+/*An array containing all vehicles I can think of*/
+
+var vehicles = ["Car", "Van", "Motorbike", "Motorhome", "Bus", "Lorry", "Truck", "Forklift Truck", "Scooter", "Train", "Tractor", "Digger", "JCB", "Tipper"];
+
+/*initiate the autocomplete function on the "myInput" element, and pass along the vehicles array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), vehicles);
+</script>
+
+
+</body>
+</html>
