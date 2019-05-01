@@ -72,7 +72,7 @@ a.linkLarge.arrow:after {  vertical-align: baseline;  }
 
 .viewBrowser {
   border-bottom: 1px solid #e5e5e5;
-  color:#999;
+  color:#5f5f5f;
   font-size: 14px;
   font-weight:bold;
   letter-spacing:1px;
@@ -265,16 +265,36 @@ li.info::before {
 }
 
 .phone {
-  color:#3032c1;
-  font-size:32px;
+  font-size:28px;
 }
 
 h3.tile {
-  background:#fafafa;
+
   display:inline-block;
-  width:45%;
+  width:250px;
   min-height:86px;
-  padding: 20px;
-  margin:10px;  
+  margin:10px 0;  
   vertical-align:top;
+}
+
+h1.intro img {
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  height: 50px;
+  right: 30px;
+  top: 20px;
+}
+
+img.tileIcon {
+  background: #00008f;
+  border-radius: 50%;
+  padding: 10px;
+  height: 70px;
+  margin:10px 0;
+}
+
+.phone img.tileIcon {
+  margin-right:20px;
+  vertical-align:middle;
 }
