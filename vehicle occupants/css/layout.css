@@ -1,0 +1,128 @@
+@font-face {
+  font-family: publico;
+  src: url("publico.otf") format("opentype");
+  src: url('publico.ttf')  format('truetype')
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position:relative;
+  color: #333;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight:600;
+
+}
+
+*:focus {
+outline: none;
+}
+
+::selection {
+  background: rgba(240, 118, 98, 0.5);
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+    margin: 20px 0;
+    text-align: right;
+}
+
+.inline {  display:inline-block;}
+.block { display:block; }
+.relative { position:relative; }
+.absolute  { position:absolute; }
+.clearfix { overflow: auto; }
+.full { width:100%; }
+
+
+.white {background-color:#fff; color:#333}
+.grey {background-color:#fafafa; color:#333}
+.warmGrey {background-color:#f5f5f5; color:#333}
+.warmBlue {background-color:#3b3fd8; color:#fff;}
+.blueGreen{background-color:#027180; color:#fff;}
+.maroon {background-color:#914146; color:#fff;}
+.bluePurp {background-color:#3032c1; color:#fff;}
+.darkBlue {background-color:#00005b; color:#fff;}
+.inactive {background-color:#f5f5f5; color:#999}
+
+a {  text-decoration:none; font-weight:bold; color:#00008f; }
+a:hover {  color:#00005b; }
+
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 15px;
+}
+
+.main {
+  width: 730px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 9px 0 #cccccc;
+  margin: 20px 0;
+}
+
+.gutter {
+    padding-left: 30px!important;
+    padding-right: 30px!important;
+}
+
+
+section {
+  margin-bottom:26px;
+}
+
+.mainsectionHeading {
+  border-bottom: solid 1px #ccc;
+  font-family:'Publico';
+  font-size: 28px;
+  font-weight: bold;
+  padding: 14px 0;
+}
+
+.mainsectionHeading span {
+  display: block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.mainsectionBody {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 20px 0;
+}
+
+h1 {
+  font-family:'Publico';
+  font-size: 36px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+  letter-spacing:0.18px;
+  line-height: 1.5;
+  padding-right:15px;
+  padding-top:18px;
+  text-align:left;
+}
