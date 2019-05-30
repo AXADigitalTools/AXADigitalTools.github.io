@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>How many vehicles? | eNol Prototype</title>
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/css.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+
+<body class="grey">
+<div class="content">
+<div class="container">
+<p>Dynamic dropdown based on input</p>
+
+<div class="main inline">
+  <div class="mainsectionHeading white gutter">
+    <span>4/5</span> Who & which vehicle
+  </div>
+  <div class="mainsectionBody grey gutter">
+
+<section>
+
+<div id="what" class="full">
+    <div class="question">How many people were in your vehicle?</div>
+    <input type="radio" id="unknown" name="what" class="options filter" data-next="nextQuestion">
+    <label for="unknown" class="options">I don't know</label>
+    <input type="radio" id="0" name="what" class="options filter" data-next="nextQuestion">
+    <label for="0" class="options">0</label>
+    <input type="radio" id="1" name="what" class="options filter" data-next="nextQuestion">
+    <label for="1" class="options">1</label>
+    <input type="radio" id="2" name="what" class="options filter" data-next="nextQuestion">
+    <label for="2" class="options">2</label>
+    <input type="radio" id="3" name="what" class="options filter" data-next="nextQuestion">
+    <label for="3" class="options">3</label>
+    <input type="radio" id="4" name="what" class="options filter" data-next="nextQuestion">
+    <label for="4" class="options">4</label>
+    <br><br><input type="radio" id="5+" name="what" class="options filter" data-next="moreThanFour">
+    <label for="5+" class="options">More than 4</label>
+ 
+  <div id="moreThanFour" class="conditional dropdown inline">
+    <button class="dropbtn" id="dd1Title">select</button>
+      <div class="ddContent">
+        <input type="radio" id="5" name="dd1" class="options filter" data-next="nextQuestion" value="5">
+        <label for="5" class="dd">5</label>
+        <input type="radio" id="6" name="dd1" class="options filter" data-next="nextQuestion" value="6">
+        <label for="6" class="dd">6</label>
+        <input type="radio" id="7" name="dd1" class="options filter" data-next="nextQuestion" value="7">
+        <label for="7" class="dd">7</label>
+        <input type="radio" id="8" name="dd1" class="options filter" data-next="nextQuestion" value="8">
+        <label for="8" class="dd">8</label>
+        <input type="radio" id="9" name="dd1" class="options filter" data-next="nextQuestion" value="9">
+        <label for="9" class="dd">9</label>
+        <input type="radio" id="10" name="dd1" class="options filter" data-next="nextQuestion" value="10">
+        <label for="10" class="dd">10</label>
+        <input type="radio" id="11" name="dd1" class="options filter" data-next="nextQuestion" value="11">
+        <label for="11" class="dd">11</label>
+        <input type="radio" id="12" name="dd1" class="options filter" data-next="nextQuestion" value="12">
+        <label for="12" class="dd">12</label>
+        <input type="radio" id="13" name="dd1" class="options filter" data-next="nextQuestion" value="13">
+        <label for="13" class="dd">13</label>
+        <input type="radio" id="14" name="dd1" class="options filter" data-next="nextQuestion" value="14">
+        <label for="14" class="dd">14</label>
+        <input type="radio" id="15" name="dd1" class="options filter" data-next="nextQuestion" value="15">
+        <label for="15" class="dd">15</label>
+        <input type="radio" id="16" name="dd1" class="options filter" data-next="nextQuestion "value="16">
+        <label for="16" class="dd">16</label>
+      </div>
+    </div>
+
+</div>
+
+</section>
+
+<section>
+
+<div id="nextQuestion" class="conditional full">
+ 
+   <div class="question">The next question will go here</div>
+
+</div>
+
+</section>
+
+</div>
+
+</div>
+<!-- end of container -->
+</div>
+<!-- end of content -->
+</div>
+
+<footer class="footer">
+<div class="subFooter">
+<ul class="container">
+        <li>© Copyright 2019</li>
+</ul>
+</div>
+
+
+<!-- JS for showing/hiding dynamic questions based on radio button input  -->
+
+<script>
+var buttons = document.getElementsByClassName('options');
+var questions = document.getElementsByTagName('div');
+
+for (var i = 0; i < buttons.length; i++) {
+  var button = buttons[i];
+  button.addEventListener('click', function() {
+    var target = this.getAttribute('data-next');
+    for (var j = 0; j < questions.length; j++) {
+      var question = questions[j];
+      if (question.id == target) {
+        question.classList.add('show');
+      } 
+    }
+  });
+}
+</script>
+
+<!-- Jquery for changing parent div text to match selected dropdown -->
+
+<script>
+$("input:radio[name=dd1]").click(function() {
+ $("#dd1Title").addClass("checked");
+ $('#dd1Title').html($(this).val());
+})
+
+$("input:radio[name=dd2]").click(function() {
+ $("#dd2Title").addClass("checked");
+ $('#dd2Title').html($(this).val());
+})
+
+$("input:radio[name=dd3]").click(function() {
+ $("#dd3Title").addClass("checked");
+ $('#dd3Title').html($(this).val());
+})
+
+$("input:radio[name=dd4]").click(function() {
+ $("#dd4Title").addClass("checked");
+ $('#dd4Title').html($(this).val());
+})
+
+$("input:radio[name=dd5]").click(function() {
+ $("#dd5Title").addClass("checked");
+ $('#dd5Title').html($(this).val());
+})
+</script>
+
+
+
+</body>
+</html>
