@@ -1,6 +1,6 @@
 .button.continue {
   background: #f07662;
-  border-bottom: 2px solid #ec4d33;
+  border-bottom: 2px solid #0003;
   color: #fff;
   cursor:pointer;
   font-weight:bold;
@@ -10,7 +10,15 @@
   overflow:hidden;
   padding: 0 30px;
   text-align:center;
-  width:calc(100% - 30px);
+  width: 100%;
+}
+
+.button.continue.inactive {
+  background: #e5e5e5;
+  border:1px solid #ccc;
+  border-bottom:2px solid #ccc;
+  color:#999;
+  cursor:auto;
 }
 
 
@@ -19,7 +27,7 @@
 }
 
 .button.continue::before {
-  background: #ec4d33;
+  background: #0003;
   content:"";
   display: block;
   height: 560px;
@@ -35,10 +43,19 @@
     width: 100%;
 }
 
+.button.continue.inactive:hover::before {
+    width: 0;
+}
+
 .button.continue span.arrow {
   width: auto;
   position:absolute;
-  right:20px;
+  margin-left:20px;
+  top: 3px;
+}
+
+.button.continue span.arrow img{
+  height:16px;
 }
 
 
@@ -330,10 +347,7 @@ footer li a {
   .sidebarContent p {
     font-size: 14px;
   }
-  
-  .button.continue {
-    width:calc(100% - 15px);
-  }
+
 }
 
 /* Medium Layout for tablets and window sizes up to 992px wide */
@@ -350,8 +364,6 @@ footer li a {
   .sidebarContent {
     padding-top: 10px;
   }
-
-
 
 }
 
@@ -416,8 +428,5 @@ footer li a {
     font-family: 'Source Sans Pro', sans-serif;
   }
 
-  .button.continue {
-    width:100%;
-  }
 
 }
