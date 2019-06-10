@@ -1,0 +1,112 @@
+@font-face {
+  font-family: publico;
+  src: url("publico.otf") format("opentype");
+  src: url('publico.ttf')  format('truetype')
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #fafafa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.inline {  display:inline-block; }
+.block { display:block;}
+.clearfix {  overflow: auto; }
+
+.container {
+  width:1140px;
+  margin:0 auto;
+  padding: 0 15px;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+  margin:20px 0;
+  text-align:right;
+}
+
+.gutter {
+  padding-left: 30px!important;
+  padding-right: 30px!important;
+
+}
+
+.header {
+  height:70px;
+  width:100%;
+  background: #fff;
+}
+
+
+/* Large Layout for portrait mode tablets and window sizes up to 1200px wide */
+
+@media only screen and (max-width: 1199px) {
+
+.container {
+  width:960px;
+}
+
+
+}
+
+/* Medium Layout for tablets and window sizes up to 992px wide */
+
+@media only screen and (max-width: 991px) {
+
+.container {
+  width:720px;
+}
+
+.inline {
+  display:block;
+  float:none;
+}
+
+.footer {
+  text-align: center;
+}
+
+}
+
+/* Small Layout for mobiles and window sizes up to 768px wide */
+
+@media only screen and (max-width: 767px) {
+
+.container {
+  width:100%;
+  max-width:720px;
+}
+
+.header {
+height:60px;
+}
+
+.gutter {
+  padding-left: 15px!important;
+  padding-right: 15px!important;
+
+}
+
+
+}
