@@ -27,7 +27,7 @@
 }
 
 .button.continue::before {
-  background: #0003;
+  background: #ec4d33;
   content:"";
   display: block;
   height: 560px;
