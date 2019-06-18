@@ -43,17 +43,16 @@ p {
   color: #fff;
   cursor:pointer;
   font-weight:bold;
-  height: 50px;
-  line-height: 50px;
   margin-top: 20px;
   overflow:hidden;
-  padding: 0 30px;
+  padding: 14px 30px;
   text-align:center;
   width: 100%;
 }
 
 .button.continue span {
   z-index: 99;
+  display:inline-block;
 }
 
 .button.continue::before {
@@ -79,7 +78,6 @@ p {
 
 .button.continue span.arrow {
   width: auto;
-  position:absolute;
   margin-left:20px;
   top: 3px;
 }
