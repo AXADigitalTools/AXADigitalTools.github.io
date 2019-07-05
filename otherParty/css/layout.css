@@ -1,0 +1,96 @@
+@font-face {
+  font-family: publico;
+  src: url("publico.otf") format("opentype");
+  src: url('publico.ttf')  format('truetype')
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: rgba(240, 118, 98, 0.5);
+}
+
+body {
+  background-color:  #fff;
+  color: #333;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align:center;
+}
+
+
+.inline {  display:inline-block; float: left; }
+.block { display:block; }
+.clearfix {  overflow: auto; }
+.full {  width:100%; }
+
+
+.white {background-color:#fff; color:#333}
+.grey {background-color:#fafafa; color:#333}
+.warmGrey {background-color:#f5f5f5; color:#333}
+.warmBlue {background-color:#3b3fd8; color:#fff;}
+.blueGreen{background-color:#027180; color:#fff;}
+.maroon {background-color:#914146; color:#fff;}
+.bluePurp {background-color:#3032c1; color:#fff;}
+.darkBlue {background-color:#00005b; color:#fff;}
+
+a {  text-decoration:none; font-weight:bold; color:#00008f; }
+a:hover {  color:#00005b; }
+a:after {  background:url("../images/arrow.png") no-repeat 0 0; content:""; display:inline-block; height:16px; margin-left:10px; vertical-align:top; width:16px; }
+a:hover:after {  margin-left:15px; }
+a.diagonal:after {  transform:rotate(-45deg); }
+
+
+.container {
+  width:  630px;
+  margin:  0 auto;
+  height:  100%;
+  padding:  0 15px;
+}
+
+.viewBrowser {
+  border-bottom: 2px solid #e5e5e5;
+  font-size: 12px;
+  height: 41px;
+  padding-top: 15px;
+}
+
+header {
+  padding: 0 18px 20px;
+}
+
+.logo {
+  height: 54px;
+  width: 54px;
+  position: relative;
+}
+
+section {
+  padding:60px;
+}
+
+footer {
+  padding:15px;
+}
+
+
+h1 {
+  font-family:'Publico';
+  font-size: 36px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+  letter-spacing:0.18px;
+  line-height: 1.5;
+  padding-top:18px;
+  text-align:left;
+}
+
+li a { padding: 0 0 0 30px; cursor: pointer; line-height: 50px; display: inline-block; vertical-align: middle; text-align: center; }
