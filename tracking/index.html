@@ -1,1 +1,332 @@
+<html>
+<head>
+	<title>Direct Motor Claims Tracking Prototype</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/jquery.donut.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro" rel="stylesheet">
 
+<script>
+  $( function() {
+    $( "#accordion" ).accordion({
+	active: false,
+      collapsible: true
+    });
+  } );
+  </script>
+
+</head>
+
+
+<body>
+
+<header>
+	<div class="full">
+	<img src="images/logo.png" style="height: 43px; float: left; margin-top:14px;">
+	<div class="back">
+		<button class="dropbtn"><i class="fas fa-question" ></i>FAQs</a></button>
+		<button onclick="notifications()" class="dropbtn"><span class="alert">3</span><i class="fas fa-bell right"></i>Notifications</a></button>
+
+		<div id="notifications" class="dropdown-content hidden notifications">
+		<div class="dropdown-header">3 New Notifications <span class="">See All (1) <i class="fas fa-arrow-right"></span></i></div>
+		
+		<a href="#" target="_blank" class="new"><strong>New Payment</strong><br>
+		We have issued a payment on claim 101-000-7878.<br>
+		
+		<sub>16<sup>th</sup> June 2018</sub></a>
+
+		<a href="10423 - Letter (18-09-2015).pdf" target="_blank" class="new"><strong>AXA Claims Team</strong><br>
+		We have sent you a letter regarding claim 101-000-7878.
+		<span class="attachment"><i class="fas fa-paperclip"></i>Letter (06-06-2018)</span>
+		<sub>6<sup>th</sup> June 2018</sub></a>
+		
+		<a href="#" class="new"><strong>AXA Claims Team</strong><br>
+		We have sent you a letter regarding claim 101-000-7878.
+		<span class="attachment"><i class="fas fa-paperclip"></i>Letter (04-06-2018)</span>
+		<sub>4<sup>th</sup> June 2018</sub> </a>
+
+		<a href="#"><strong>AXA Claims Team</strong><br>
+		We have sent you a letter regarding claim 101-000-7878.
+		<span class="attachment"><i class="fas fa-paperclip"></i>Letter (01-06-2018)</span>
+		<sub>1<sup>st</sup> June 2018</sub></a>
+
+
+		 </div>
+
+		
+	</div>
+	</div>
+</header>
+	
+<div id="myHeader">
+
+	<header class="banner">
+	<div class="full relative nooverflow">
+		<img src="images/motor_white.png">
+		<h1 class="inline" style="float: left;"><sup>Claim Number: 101-000-7878</sup>Accident</h1>
+		<h1 class="inline" style="text-align: right;font-size: 1.6em;"><sup>Claim Status</sup>In Progress <i class="fas fa-circle" style="color: #1cc54e;font-size: 20px;margin-left: 10px;"></i></h1>
+       	</div>
+	</header>
+
+<div class="nav shift">
+<ul class="full nooverflow">
+
+<li><a href="#" class="shutter-out-horizontal nooverflow">Your Claim</a></li>
+<li><a href="#" class="shutter-out-horizontal nooverflow">Service Providers</a></li>
+<li><a href="#" class="shutter-out-horizontal nooverflow">Claim Cost</a></li>
+<li><a href="#" class="shutter-out-horizontal nooverflow">Payments</a></li>
+
+</ul>
+</div>
+</div>
+
+<div class="wrapper full">
+
+<div class="box relative" id="yourclaim">
+
+<h2 class="absolute">Your Claim</h2>
+
+
+<div class="onecol inline">
+<h3>Claim Number 101-000-7878</h3><br>
+<span class="icon inline"><i class="fas fa-quote-left"></i></i></span><span class="inline quote"><h4>What happened?</h4>I was reversing in a car park when i was hit by a falling tree. Maecenas posuere dolor pulvinar justo lacinia convallis. Quisque vitae justo iaculis, finibus mi at, posuere dui. </span>  <br>
+<span class="icon inline"><i class="far fa-calendar-alt"></i></span> <span class="inline quote"> <h4>When?</h4>10 / 06 / 2018 </span> <br>
+<span class="icon inline"><i class="fas fa-map-marker-alt"></i></span> <span class="inline quote"> <h4>Where?</h4>Sainsburys, Lancaster LA1 1HH </span> <br>
+<span class="icon inline"><i class="far fa-user"></i></span> <span class="inline quote"><h4>Who was driving?</h4> Henry Hammersley </span> <br>
+</div>
+
+<h3>Claim Details</h3><br>
+
+<ul class="legend inline twocol left vertical">
+
+<li>Date Claim Reported<span class="cost">11 / 06 / 2018</span></li>
+<li>Type of Claim<span class="cost">Accident</span></li>
+<li>Claim Cause<span class="cost">Impact with falling item</span></li>
+</ul>
+
+<ul class="legend inline twocol vertical">
+<li style="font-size: 14px;">Liability Assessment<span class="cost" style="font-size: 16px;">Other Party at Fault <i class="fas fa-info-circle"></i></span></li>
+<li>Potential Recovery?<span class="cost">Yes<i class="fas fa-info-circle"></i></span></li>
+<li>Claim Excess <span class="cost">£250<i class="fas fa-info-circle"></i></span></li>
+</ul>
+
+</div> <!--end of box-->
+
+
+<div class="box relative" id="services accordion">
+
+<h2 class="absolute">Service Providers</h2>
+
+A service provider is a company or person appointed by us to act on our behalf and to assess or validate your claim. They are authorised by us to arrange a quotation, provide a service or carry out repairs under our delegated authority.
+
+<h4>See more about the service providers</h4>
+
+<div id="accordion">
+<h3 class="icon"><img src="images/repairs.png" class="inline"><p class="inline">Vehicle Repairs</p></h3>
+<div>
+
+<h3>Vizion Repair Network</h3>
+
+<div class="chart inline relative vertical nooverflow">
+<img src="images/vizion.png" class="absolute" style="width: 150px;margin-top: 20px;">
+</div>
+
+<ul class="legend inline">
+
+<li>Type of Service Provider<span class="cost">Approved Repairer<i class="fas fa-info-circle"></i></span></li>
+<li>Date Appointed<span class="cost">11th June 2018</span></li>
+<li>Estimated Completion Date<span class="cost">20th June 2018</span></li>
+<li>Contact Details<span class="cost">help@vizion.co.uk</span></li>
+<br>
+<a href="https://www.vizionnetwork.co.uk/repair-hub-login.aspx" target="_blank" class="external">View my repair progress <i class="fas fa-long-arrow-alt-right"></i></a>
+
+</ul>
+</div>
+
+<h3 class="icon"><img src="images/motor.png" class="inline"><p class="inline">Upgraded Courtesy Car</p></h3>
+<div>
+<h3>Enterprise Rent-A-Car</h3>
+
+<div class="chart inline relative vertical nooverflow">
+<img src="images/earc.jpg" class="absolute" style="height: 140px;margin-top: 20px;">
+</div>
+
+<ul class="legend inline">
+
+<li>Type of Service Provider<span class="cost">Courtesy Car<i class="fas fa-info-circle"></i></span></li>
+<li>Date Appointed<span class="cost">11th June 2018</span></li>
+<li>Estimated Completion Date<span class="cost">Duration of repairs</span></li>
+<li>Contact Details<span class="cost">0800 111 4312</span></li>
+</ul>
+</div>
+</div>
+
+</div> <!--end of box-->
+
+
+<div class="box relative" id="claim cost">
+
+<h2 class="absolute">Claim Cost</h2>
+
+
+<h3>Claim Cost overview</h3>
+<div id="doughnutChart" class="chart inline"></div>
+
+
+<ul class="legend inline">
+
+<li>Total Claim Cost to date<span class="cost">£1301.70<i class="fas fa-info-circle" title="This is a test"></i></span></li>
+<li><span class="status" style="background: #4a4ef4;"></span>Vehicle Damage<span class="cost">£482.17</span></li>
+<li><span class="status" style="background: #01adc6;"></span>Personal Possessions<span class="cost">£460.24</span></li>
+<li><span class="status" style="background: #b5d0ee;"></span>Fees<span class="cost">£359.29</span></li>
+<li><span class="status" style="background: #fcd385;"></span>Recovered Costs<span class="cost">-£54</span></li>
+
+</ul>
+
+</div> <!--end of box-->
+
+
+<div class="box relative" id="payments">
+
+<h2 class="absolute">Payments</h2>
+
+<h3>Payments made <i class="fas fa-info-circle"></i></h3>
+<br>
+
+<div class="row top">
+<div class="col1">
+Payee<span class="sort blue"></span>
+</div>
+<div>
+Date<span class="sort"></span>
+</div>
+
+<div>
+Type<span class="sort"></span>
+</div>
+
+<div>
+Amount<span class="sort"></span>	
+</div>
+	
+</div>
+
+<div class="row odd">
+
+<div class="col1">
+<span class="new">new</span>Henry Hammersley	
+</div>
+
+<div class="col2">
+16 / 06 / 2018	
+</div>
+
+<div class="col3 cleared">
+<span class="status"></span>Transfer	
+</div>
+
+<div class="col4">
+£482.17	
+</div>
+	
+</div> <!--end of row 1-->
+
+<div class="row">
+	
+<div class="col1">
+Henry Hammersley	
+</div>
+
+<div class="col2">
+14 / 06 / 2018	
+</div>
+
+<div class="col3 pending">
+<span class="status"></span>Cheque	
+</div>
+
+<div class="col4">
+£460.24	
+</div>
+	
+</div> <!--end of row 2-->
+
+</div> <!--end of box-->
+
+
+<h2>Have questions?</h2>
+<h5>Find the answers to commonly asked questions in the Help Centre</h5>
+<div class="button ghost">Go to help centre</div>
+
+
+</div> <!--end of wrapper-->
+
+<footer>
+
+<div class="legal">
+
+	<p>Copyright AXA 2018 ©</p>
+	<p>AXA Insurance UK Plc is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority.</p>
+
+</div>
+
+</footer> <!--end of footer-->
+
+</body>
+
+  <script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+  </script>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("mycHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+
+<script>
+
+function notifications() {
+    document.getElementById("notifications").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<script>
+$(function() {
+  $('#serviceselector').change(function(){
+    $('.services').hide();
+    $('#' + $(this).val()).show();
+  });
+
+});
+</script>
