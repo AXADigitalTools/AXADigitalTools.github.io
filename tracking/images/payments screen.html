@@ -1,0 +1,229 @@
+<html>
+<head>
+	<title>Direct Motor Claims Tracking Prototype</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/jquery.donut.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro" rel="stylesheet">
+</head>
+
+
+<body>
+
+<header>
+	<div class="full">
+	<img src="images/logo.png" style="height: 43px; float: left; margin-top:14px;">
+	<div class="back dropdown">
+		<button class="dropbtn"><i class="fas fa-question"></i>FAQs</a></button>
+		<button onclick="notifications()" class="dropbtn"><span class="alert">3</span><i class="fas fa-bell right"></i>Notifications</a></button>
+
+		<div id="notifications" class="dropdown-content hidden notifications">
+		<div class="dropdown-header">3 New Notifications <span class="">See All (1) <i class="fas fa-arrow-right"></span></i></div>
+		
+		<a href="#" target="_blank" class="new"><strong>New Payment</strong><br>
+		We have issued a payment on claim 0111-0012-0311.<br>
+		
+		<sub>16<sup>th</sup> June 2018</sub></a>
+
+		<a href="10423 - Letter (18-09-2015).pdf" target="_blank" class="new"><strong>AXA Claims Team</strong><br>
+		We have sent you a letter regarding claim 0111-0012-0311.
+		<span class="attachment"><i class="fas fa-paperclip"></i>Letter (06-06-2018)</span>
+		<sub>6<sup>th</sup> June 2018</sub></a>
+		
+		<a href="#" class="new"><strong>AXA Claims Team</strong><br>
+		We have sent you a letter regarding claim 0111-0012-0311.
+		<span class="attachment"><i class="fas fa-paperclip"></i>Letter (04-06-2018)</span>
+		<sub>4<sup>th</sup> June 2018</sub> </a>
+
+		<a href="#"><strong>AXA Claims Team</strong><br>
+		We have sent you a letter regarding claim 0111-0012-0311.
+		<span class="attachment"><i class="fas fa-paperclip"></i>Letter (01-06-2018)</span>
+		<sub>1<sup>st</sup> June 2018</sub></a>
+
+
+		 </div>
+
+		
+	</div>
+	</div>
+</header>
+	
+<div id="myHeader" style="display:none">
+
+	<header class="banner">
+	<div class="full">
+	<img src="images/motor_white.png">
+	<h1><sup>Claim Number 0111-0012-0311</sup>Accident</h1>
+	</div>
+
+	<div class="nav full">
+	<ul>
+	  <li><a href="#overview">Your Claim</a></li>
+	  <li><a href="#services">Service Providers</a></li>
+	  <li><a class="active" href="#payments">Payments</a><span class="alert">1</span></li>
+
+	</ul>
+    </div>
+	</header>
+</div>
+
+<div id="alert"></div>
+
+<div class="wrapper full">
+
+<h2>Claim Number:</h2>
+
+<div class="box relative" id="overview">
+
+<h2 class="absolute"><img src="images/bills_pound_white_x1.png">Payments</h2>
+
+
+<h3>Claim Cost overview</h3>
+<div id="doughnutChart" class="chart inline"></div>
+
+
+<ul class="legend inline">
+
+<li>Total Claim Cost to date<span class="cost">£1301.70</span></li>
+<li><span class="status" style="background: #4a4ef4;"></span>Vehicle Damage<span class="cost">£482.17</span></li>
+<li><span class="status" style="background: #01adc6;"></span>Personal Possessions<span class="cost">£460.24</span></li>
+<li><span class="status" style="background: #b5d0ee;"></span>Fees<span class="cost">£359.29</span></li>
+<li><span class="status" style="background: #fcd385;"></span>Recovered Costs<span class="cost">-£54</span></li>
+
+</ul>
+
+
+<div id="tab-1" class="tab-content current">
+
+<br>
+
+<h3>Payments Made</h3>
+<br>
+
+<div class="row top">
+<div class="col1">
+Payee<span class="sort blue"></span>
+</div>
+<div>
+Date<span class="sort"></span>
+</div>
+
+<div>
+Status<span class="sort"></span>
+</div>
+
+<div>
+Amount<span class="sort"></span>	
+</div>
+	
+</div>
+
+<div class="row">
+
+<div class="col1">
+<span class="new">new</span>Morgan Cole Reading	
+</div>
+
+<div class="col2">
+16th June 2018	
+</div>
+
+<div class="col3 cleared">
+<span class="status"></span>Cleared	
+</div>
+
+<div class="col4">
+£482.17	
+</div>
+	
+</div> <!--end of row 1-->
+
+<div class="row">
+	
+<div class="col1">
+Morgan Cole Reading	
+</div>
+
+<div class="col2">
+14th June 2018	
+</div>
+
+<div class="col3 pending">
+<span class="status"></span>Pending	
+</div>
+
+<div class="col4">
+£460.24	
+</div>
+	
+</div> <!--end of row 2-->
+
+<br>
+</div> <!--end of tab--> 
+
+
+
+</div> <!--end of box-->
+
+<h2>Have questions?</h2>
+<h5>Find the answers to commonly asked questions in the Help Centre</h5>
+
+</div> <!--end of wrapper-->
+
+<footer>
+
+<div class="legal">
+
+	<p>Copyright AXA 2018 ©</p>
+	<p>AXA Insurance UK Plc is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority.</p>
+
+</div>
+
+</footer> <!--end of footer-->
+
+</body>
+
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("mycHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+
+<script>
+
+function notifications() {
+    document.getElementById("notifications").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
